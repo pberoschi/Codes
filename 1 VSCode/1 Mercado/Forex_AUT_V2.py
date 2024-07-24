@@ -182,7 +182,7 @@
 
 
 
-# bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
+# bot = telepot.Bot('0000')
 # MessageLoop(bot, handle).run_as_thread()
 # print ('Listening ...')
 

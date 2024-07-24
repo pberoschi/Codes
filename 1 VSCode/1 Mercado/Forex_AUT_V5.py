@@ -23,13 +23,13 @@ password    = leitura[2]
 dados.close()
 
 
-# bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
-bot = telepot.Bot('7353722921:AAHMBkYhINrPtubv2UDzM1FnhNBHlLt-wLM')
+# bot = telepot.Bot('0000000')
+bot = telepot.Bot('000000')
 chat_id = 984798692
 
 #if not mt5.initialize(login=50717088, server="ICMarketsSC-Demo", password=""):
 if not mt5.initialize(path="C:\\Program Files\\Zero Markets MetaTrader 5 Terminal\\terminal64.exe",login=135022988, server="ZeroMarkets-Demo-1", password=password):
-# if not mt5.initialize(login=135022402, server="ZeroMarkets-Demo-1", password="Claudia123@"):
+# if not mt5.initialize(login=135022402, server="ZeroMarkets-Demo-1", password=""):
     print("initialize() failed, error code =",mt5.last_error())
     quit()
 

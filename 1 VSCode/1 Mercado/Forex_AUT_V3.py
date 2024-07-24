@@ -8,12 +8,12 @@ import MetaTrader5 as mt5
 import time
 # import Forex_Espelho
 
-bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
+bot = telepot.Bot('000000')
 chat_id = 984798692
 
 #if not mt5.initialize(login=50717088, server="ICMarketsSC-Demo", password=""):
 if not mt5.initialize(login=82491017, server="MetaQuotes-Demo", password="V+1dHiKp"):
-# if not mt5.initialize(login=135022402, server="ZeroMarkets-Demo-1", password="Claudia123@"):
+# if not mt5.initialize(login=135022402, server="ZeroMarkets-Demo-1", password=""):
     print("initialize() failed, error code =",mt5.last_error())
     quit()
 

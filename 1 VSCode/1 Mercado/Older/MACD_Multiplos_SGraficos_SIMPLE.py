@@ -14,7 +14,7 @@ dados.close()
 
 #if not mt5.initialize(login=50717088, server="ICMarketsSC-Demo", password=""):
 if not mt5.initialize(path="C:\\Program Files\\Zero Markets MetaTrader 5 Terminal\\terminal64.exe",login=130023874, server="ZeroMarkets-Live-1", password=password):
-# if not mt5.initialize(login=135022402, server="ZeroMarkets-Demo-1", password="Claudia123@"):
+# if not mt5.initialize(login=135022402, server="ZeroMarkets-Demo-1", password=""):
     print("initialize() failed, error code =",mt5.last_error())
     quit()
 
