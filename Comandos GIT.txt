@@ -1,0 +1,8 @@
+- git init: iniciar
+- git status: 
+- git add .
+- git commit -m "": comitar modificações
+- git push origin (seu branch)
+- git clone "endereço": clonar repositório
+- git config --global user.email "beroschi.peter@gmail.com"
+- git config --global user.name "pberoschi"
