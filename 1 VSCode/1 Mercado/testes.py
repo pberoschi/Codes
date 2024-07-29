@@ -4,77 +4,79 @@ import telepot
 from time import sleep
 
 # BUSCAR DADOS SENSIVEIS EM ARQUIVO TXT #
-# dados = open('C:\\Users\\johnn\\Google Drive\\Pessoal\\1_Programacao\\Python Scripts\\Dados\\ZeroMarkets_dados.txt', 'r', encoding='utf-8')
+# dados = open('C:\\Users\\johnn\\Google Drive\\Pessoal\\1_Programacao\\Python Scripts\\1 Python\\Dados\\ZeroMarkets_dados.txt', 'r', encoding='utf-8')
 # leitura = dados.readlines()
 # login       = int(leitura[0])
 # server      = leitura[1]
-# password    = leitura[2]
+# password2    = leitura[2]
+# tokenBOT    = leitura[3]
 # dados.close()
 
 
-if not mt5.initialize(login=82491017, server="MetaQuotes-Demo", password="V+1dHiKp"):
+#if not mt5.initialize(login=50717088, server="ICMarketsSC-Demo", password=""):
+if not mt5.initialize(path="C:\\Program Files\\MetaTrader 5\\terminal64.exe",login=82491017, server="MetaQuotes-Demo", password='V+1dHiKp'):
+# if not mt5.initialize(login=135022402, server="ZeroMarkets-Demo-1", password=""):
     print("initialize() failed, error code =",mt5.last_error())
     quit()
 
 
-lista = ['EURUSD','GBPUSD','NZDUSD','AUDUSD','USDCAD','USDJPY','USDCHF','USDHKD']
+# def sendTele(ativo):
+#       print('- Função sendTele acionada')
+#       bot = telepot.Bot(tokenBOT)
+#       chat_id = 984798692
 
-x = "XAUAUD"
-
-
-### OBTENÇÃO DOS DADOS
-dados = mt5.copy_rates_from_pos(x, mt5.TIMEFRAME_M1, 0, 210)
-tabela = pd.DataFrame(dados)
-# tabela['time']=pd.to_datetime(tabela['time'], unit='s')
-# tabela = tabela[['time','open','high','low','close','tick_volume']]
-print(tabela.tail())
-
-# calculo do MACD
-# tabela['EMA12'] = tabela['close'].ewm(span=12, adjust=False).mean()         # Calculate the 12-period EMA
-# tabela['EMA26'] = tabela['close'].ewm(span=26, adjust=False).mean()         # Calculate the 26-period EMA
-# tabela['MACD'] = tabela['EMA12'] - tabela['EMA26']                          # Calculate MACD (the difference between 12-period EMA and 26-period EMA)
-# tabela['Signal_Line'] = tabela['MACD'].ewm(span=9, adjust=False).mean()     # Calculate the 9-period EMA of MACD (Signal Line)
-# print(tabela.tail())
+#       bot.sendMessage(chat_id, f'>>> CRUZAMENTO MACD LINHA - {ativo} <<<')
 
 
+# lista = ['EURUSD','GBPUSD','NZDUSD','AUDUSD','USDCAD','USDJPY','USDCHF','USDHKD']
+# lista = ['ETHUSD','RPLUSD','BCHUSD','LTCUSD','DOGUSD','BTCUSD','ADAUSD','SOLUSD','DOTUSD','EOSUSD','XLMUSD','LNKUSD']
+lista = ['EURUSD','GBPUSDD','NZDUSD','AUDUSD','USDCADD','USDJPY','USDCHF','USDHKD']
 
-# import MetaTrader5 as mt5
-# # display data on the MetaTrader 5 package
-# print("MetaTrader5 package author: ",mt5.__author__)
-# print("MetaTrader5 package version: ",mt5.__version__)
- 
-# # establish connection to the MetaTrader 5 terminal
-# if not mt5.initialize():
-#     print("initialize() failed, error code =",mt5.last_error())
-#     quit()
- 
-# get all symbols
-# symbols=mt5.symbols_get()
-# print('Symbols: ', len(symbols))
-# count=0
+def aut():
+    for x in lista:
+        try:
+            ### OBTENÇÃO DOS DADOS
+            dados = mt5.copy_rates_from_pos(x, mt5.TIMEFRAME_H4, 0, 210)
+            # dados = mt5.copy_rates_from_pos(x, mt5.TIMEFRAME_M1, 0, 210)
+            tabela = pd.DataFrame(dados)
+            tabela['time']=pd.to_datetime(tabela['time'], unit='s')
+            tabela = tabela[['time','open','high','low','close','tick_volume']]
+            # print(tabela.tail())
 
-# display the first five ones
-# for s in symbols:
-#     count+=1
-#     print("{}. {}".format(count,s.name))
-#     if count==5: break
-# print()
- 
-# get symbols containing RU in their names
-# ru_symbols=mt5.symbols_get("*RU*")
-# print('len(*RU*): ', len(ru_symbols))
-# for s in ru_symbols:
-#     print(s.name)
-# print()
- 
-# # get symbols whose names do not contain USD, EUR, JPY and GBP
-# group_symbols=mt5.symbols_get(group="*,!*USD*,!*EUR*,!*JPY*,!*GBP*")
-# print('len(*,!*USD*,!*EUR*,!*JPY*,!*GBP*):', len(group_symbols))
-# for s in group_symbols:
-#     print(s.name,":",s)
+            # calculo do MACD
+            tabela['EMA12'] = tabela['close'].ewm(span=12, adjust=False).mean()         # Calculate the 12-period EMA
+            tabela['EMA26'] = tabela['close'].ewm(span=26, adjust=False).mean()         # Calculate the 26-period EMA
+            tabela['MACD'] = tabela['EMA12'] - tabela['EMA26']                          # Calculate MACD (the difference between 12-period EMA and 26-period EMA)
+            tabela['Signal_Line'] = tabela['MACD'].ewm(span=9, adjust=False).mean()     # Calculate the 9-period EMA of MACD (Signal Line)
 
-# get symbols whose names do not contain USD, EUR, JPY and GBP
-# group_symbols=mt5.symbols_get(group="*XAU*")
-# print(':', len(group_symbols))
-# for s in group_symbols:
-#     print(s.name,":",s)
+            # Check for MACD and Signal Line crossovers in the last two rows
+            last_row = tabela.iloc[-1]
+            second_last_row = tabela.iloc[-2]
+
+
+            # CRUZAMENTO COM MACD CONCORDANDO    
+            if (second_last_row['MACD'] > second_last_row['Signal_Line']) and (last_row['MACD'] < last_row['Signal_Line']) and (last_row['MACD'] <= 0):
+                print(f'{x}: Sinal cruzou para BAIXO')
+                # sendTele(x)
+            elif second_last_row['MACD'] < second_last_row['Signal_Line'] and last_row['MACD'] > last_row['Signal_Line'] and (last_row['MACD'] >= 0):
+                print(f'{x}: Sinal cruzou para CIMA')
+                # sendTele(x)
+            else:
+                print(f'{x}: Sem cruzamento')
+
+            # RECUO APÓS CRUZAMENTO
+            
+
+        except:
+            print(f'Falha nos dados do {x}. Reiniciando...')
+            # return
+        
+    # print(tabela.tail(3))
+
+
+while True:
+    aut()
+    sleep(10000000)
+    print('...')
+
+
