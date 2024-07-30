@@ -28,9 +28,9 @@ def sendTele(ativo):
       bot.sendMessage(chat_id, f'>>> CRUZAMENTO MACD LINHA - {ativo} <<<')
 
 
-# lista = ['EURUSD','GBPUSD','NZDUSD','AUDUSD','USDCAD','USDJPY','USDCHF','USDHKD']
+lista = ['EURUSD','GBPUSD','NZDUSD','AUDUSD','USDCAD','USDJPY','USDCHF','USDHKD']
 # lista = ['ETHUSD','RPLUSD','BCHUSD','LTCUSD','DOGUSD','BTCUSD','ADAUSD','SOLUSD','DOTUSD','EOSUSD','XLMUSD','LNKUSD']
-lista = ['EURUSD','GBPUSD','NZDUSD','AUDUSD','USDCAD','USDJPY','USDCHF','USDHKD','ETHUSD','RPLUSD','BCHUSD','LTCUSD','DOGUSD','BTCUSD','ADAUSD','SOLUSD','DOTUSD','EOSUSD','XLMUSD','LNKUSD']
+# lista = ['EURUSD','GBPUSD','NZDUSD','AUDUSD','USDCAD','USDJPY','USDCHF','USDHKD','ETHUSD','RPLUSD','BCHUSD','LTCUSD','DOGUSD','BTCUSD','ADAUSD','SOLUSD','DOTUSD','EOSUSD','XLMUSD','LNKUSD']
 
 def aut():
     for x in lista:
@@ -65,12 +65,11 @@ def aut():
                 print(f'{x}: Sem cruzamento')
 
             # RECUO APÓS CRUZAMENTO
-            
 
 
         except:
             print(f'Falha nos dados do {x}. Reiniciando...')
-            return
+
         
     # print(tabela.tail(3))
 
