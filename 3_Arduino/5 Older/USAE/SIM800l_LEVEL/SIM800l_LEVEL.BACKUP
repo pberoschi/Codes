@@ -1,0 +1,62 @@
+
+#define BLYNK_PRINT Serial
+#define TINY_GSM_MODEM_SIM800
+#include <TinyGsmClient.h>
+#include <BlynkSimpleSIM800.h>
+
+#include <Ultrasonic.h>
+Ultrasonic ultrassom(8,7);
+long distancia;
+
+
+char auth[] = "67lkiVEbch5A-2p_JoBbY-1H3Nl4wLUx";
+char apn[]  = "zap.vivo.com.br";
+char user[] = "vivo";
+char pass[] = "vivo";
+
+
+#define SerialAT Serial1
+#include <SoftwareSerial.h>
+SoftwareSerial SerialAT(2, 3); // RX, TX
+
+TinyGsm modem(SerialAT);
+
+BlynkTimer timer;
+
+
+void myTimerEvent()
+{
+  //Blynk.virtualWrite(V5, millis() / 1000);
+  Blynk.virtualWrite(V5, distancia);
+}
+
+void setup()
+{
+  // Debug console
+  Serial.begin(9600);
+  delay(10);
+
+  SerialAT.begin(57600);
+  delay(3000);
+
+  Serial.println("Initializing modem...");
+  modem.restart();
+
+  Blynk.begin(auth, modem, apn, user, pass);
+
+  timer.setInterval(1000L, myTimerEvent);
+}
+
+void loop()
+{
+  Blynk.run();
+  timer.run(); // Initiates BlynkTimer
+
+
+   distancia = ultrassom.Ranging(CM);
+   Serial.print(distancia); 
+   Serial.println("cm");
+   delay(2000);
+
+
+}
