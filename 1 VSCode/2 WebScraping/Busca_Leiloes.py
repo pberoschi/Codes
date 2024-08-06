@@ -10,19 +10,32 @@ from selenium.webdriver.chrome.options import Options
 
 
 def metodo1 ():
-    url = 'https://palaciodosleiloes.com.br/site/leilao.php'
+    url = 'https://www.palaciodosleiloes.com.br/site/?categoria_pesquisa=1&subcategoria_pesquisa=2&local_pesquisa=2'
     option = Options()
-    option.headless = True
-    # driver = webdriver.Chrome(options=option)     # NAVEGADOR OFF
-    driver = webdriver.Chrome()                  # NAVEGADOR ON
+    # option.headless = True
+    driver = webdriver.Chrome(options=option)     # NAVEGADOR OFF
+    # driver = webdriver.Chrome()                  # NAVEGADOR ON
     driver.get(url)
     html = driver.page_source
     soup = BeautifulSoup(html, 'html.parser')
-    teste = soup.find('h3')
-    
+    base = soup.find_all('div',{'col-md-3 pl-2 pr-1 cp'})
     driver.close()
 
-    print(teste)
+    for item in base:
+        veiculo = item.find('div',{'quebraln mt-3 mb-0 h6'}).text
+        ano = item.find('div',{'my-0 h6 mb-2'}).text
+        estado = item.find('div',{'mt-0 small'})
+        # local = item.find('div',{'float-right'}).text
+
+        # print(veiculo)
+        # print(ano)
+        print(estado)
+        # print(local)
+
+
+
+
+
 
 
 def metodo2():
@@ -44,5 +57,5 @@ def metodo2():
 
 
 
-# metodo1()
-metodo2()
+metodo1()
+# metodo2()
