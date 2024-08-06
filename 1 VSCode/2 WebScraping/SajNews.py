@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 #import pandas as pd
 import telepot
 
-telegramBot = telepot.Bot('1827005235:AAGr4ss18HkJo11QKjBYBG-TqnKLv79Ph6Q')
+telegramBot = telepot.Bot('1827005235:AAH9nEG0gU44dWcmk-x3iMbJhjckQbNapT4')
 
 
 
@@ -13,9 +13,7 @@ headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 url = ('https://blogdovalente.com.br/categoria/noticias/saj/')
 r = requests.get(url, headers=headers)
 soup = BeautifulSoup(r.text, 'lxml')
-
 base = soup.find('div',{'class':'content row'})
-
 tabela = base.find_all('div',{'class':'col-sm-7'})[0:10]
 
 
@@ -23,7 +21,8 @@ for item in tabela:
     titulo = item.find('h2').text.strip()
     resumo = item.find('p').text.strip()
     link = item.find('a').get('href')
+    # print(titulo)
     
-    #telegramBot.sendMessage(984798692,titulo)
-    #telegramBot.sendMessage(984798692,resumo)
+    # telegramBot.sendMessage(984798692,titulo)
+    # telegramBot.sendMessage(984798692,resumo)
     telegramBot.sendMessage(984798692,link)
