@@ -44,9 +44,9 @@ def aut():
             # print(tabela.tail())
 
             # calculo do MACD
-            tabela['EMA12'] = tabela['close'].ewm(span=12, adjust=False).mean()         # Calculate the 12-period EMA
-            tabela['EMA26'] = tabela['close'].ewm(span=26, adjust=False).mean()         # Calculate the 26-period EMA
-            tabela['MACD'] = tabela['EMA12'] - tabela['EMA26']                          # Calculate MACD (the difference between 12-period EMA and 26-period EMA)
+            tabela['EMA32'] = tabela['close'].ewm(span=32, adjust=False).mean()         # Calculate the 12-period EMA
+            tabela['EMA14'] = tabela['close'].ewm(span=14, adjust=False).mean()         # Calculate the 26-period EMA
+            tabela['MACD'] = tabela['EMA32'] - tabela['EMA14']                          # Calculate MACD (the difference between 12-period EMA and 26-period EMA)
             tabela['Signal_Line'] = tabela['MACD'].ewm(span=9, adjust=False).mean()     # Calculate the 9-period EMA of MACD (Signal Line)
 
             # Check for MACD and Signal Line crossovers in the last two rows
