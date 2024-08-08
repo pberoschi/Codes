@@ -7,27 +7,16 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.chrome.options import Options
 
-
-
-
-url = 'https://www.palaciodosleiloes.com.br/site/?categoria_pesquisa=1&subcategoria_pesquisa=2&local_pesquisa=2'
-option = Options()
-driver = webdriver.Chrome(options=option)     # NAVEGADOR OFF
-driver.get(url)
-html = driver.page_source
-soup = BeautifulSoup(html, 'html.parser')
-driver.find_element("xpath",'//*[@id="div_lotes"]/div/div[10]/span[2]').click()
-
-sleep(50)
-
+# url = 'https://www.palaciodosleiloes.com.br/site/?categoria_pesquisa=1&subcategoria_pesquisa=2&local_pesquisa=2'
+# option = Options()
+# driver = webdriver.Chrome(options=option)     # NAVEGADOR OFF
+# driver.get(url)
+# html = driver.page_source
+# soup = BeautifulSoup(html, 'html.parser')
+# driver.find_element("xpath",'//*[@id="div_lotes"]/div/div[10]/span[2]').click()
+# sleep(50)
 # driver.close()
-
-
 # driver.find_element("xpath",'/html/body/div[2]/div/div/div[2]/div/div/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]').click()
-
-
-
-
 
 
 def metodo1 ():
@@ -38,13 +27,13 @@ def metodo1 ():
     # driver = webdriver.Chrome()                  # NAVEGADOR ON
     driver.get(url)
     html = driver.page_source
+    # sleep(5)
+    # driver.find_element("xpath",'//*[@id="div_lotes"]/div/div[21]/span[2]').click()
+    # print("Clicado em Exibir todos")
+    # sleep(5)
     soup = BeautifulSoup(html, 'html.parser')
-    driver.find_element("xpath",'//*[@id="div_classificacao"]/div/div[2]/svg').click()
-    sleep(2)
     base = soup.find_all('div',{'col-md-3 pl-2 pr-1 cp'})
     driver.close()
-
-
 
     for item in base:
         veiculo =   item.find('div',{'quebraln mt-3 mb-0 h6'}).text
@@ -52,25 +41,18 @@ def metodo1 ():
         estado =    item.find('div',{'mt-0 small'}).next_element.text
         local =     item.find('div',{'mt-0 small'}).next_element.next_element.text
         data =      item.find('div',{'inf small'}).next_element.next_element.text
-        valor =     item.find('div',{'h3 mt-3 text-center'}).next_element.next_element.text
-        link =      item.find('onclick')
+        ref =       item.find('div',{'inf small'}).next_element.next_element.next_element.next_element.next_element.next_element.next_element.next_element.next_element.next_element.next_element.next_element.text
+        valor =     item.find('div',{'h3 mt-3 text-center'}).next_element.next_element.next_element.next_element.text
 
         print(f'Veiculo: {veiculo}')
         print(f'Ano: {ano}')
         print(f'Situacao: {estado}')
         print(f'Local: {local}')
         print(f'Data: {data}')
+        print(f'Ref: {ref}')
         print(f'Valor: {valor}')
 
         print('-'*45)
-
-
-
-
-
-
-
-
 
 
 
@@ -95,5 +77,5 @@ def metodo2():
 
 
 
-# metodo1()
+metodo1()
 # metodo2()
