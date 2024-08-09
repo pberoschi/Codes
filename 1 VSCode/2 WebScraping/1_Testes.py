@@ -1,4 +1,5 @@
-casa = "johnny gomes"
+from selenium import webdriver 
 
+driver = webdriver.Firefox() 
 
-print(casa[1])
+driver.get("https://google.co.in") 
