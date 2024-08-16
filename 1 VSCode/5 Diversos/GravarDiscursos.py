@@ -3,9 +3,6 @@ import wave
 from datetime import datetime
 
 
-
-
-
 audio = pyaudio.PyAudio()
 
 stream = audio.open(
