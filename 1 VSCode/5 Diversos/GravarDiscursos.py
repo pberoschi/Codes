@@ -58,5 +58,3 @@ except tempo3 == "17:13":
     arquivo_final.setsampwidth(audio.get_sample_size(pyaudio.paInt16))
     arquivo_final.writeframes(b"".join(frames))
     arquivo_final.close()
-
-
