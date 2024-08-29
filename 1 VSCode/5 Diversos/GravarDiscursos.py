@@ -25,7 +25,6 @@ frames = []
 #     stream.start_stream()
 #     stream.close()
 #     audio.terminate()
-
 #     arquivo_final = wave.open("gravacao.wav", "wb")
 #     arquivo_final.setnchannels(1)
 #     arquivo_final.setframerate(44000)
