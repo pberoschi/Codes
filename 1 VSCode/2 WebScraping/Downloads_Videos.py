@@ -33,7 +33,7 @@ if __name__ == '__main__':
     options = parseArgs()
 
     r = requests.get(options.url)
-     soup = BeautifulSoup(r.content, "lxml")
+    soup = BeautifulSoup(r.content, "lxml")
 
     sources = {}
 
