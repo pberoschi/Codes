@@ -34,10 +34,10 @@ const int gourmetPin  = 4;
 
 bool ledState = LOW;
 
-// const char* ssid     = "Embasa USA-M";
-// const char* password = "Sup0rt3!@#";
-const char* ssid     = "House Tec";
-const char* password = "claudia2022";
+const char* ssid     = "Embasa USA-M";
+const char* password = "Sup0rt3!@#";
+// const char* ssid     = "House Tec";
+// const char* password = "claudia2022";
 
 const String datafull = "";
 const int hora = 0;
@@ -151,8 +151,10 @@ void papai() {
 
     // Serial.println(datafull);
     if (ntp.update()) {
-      if ((hora >= 18) && (hora <= 4)) {
-        iluminacao_tempo();
+      // if ((hora >= 18) && (hora <= 4)) {
+      if ((hora >= 8) && (hora <= 12)) {
+        // iluminacao_tempo();
+        Serial.println("Testando Horário...");
         }   
     }
   }

@@ -12,15 +12,15 @@
 #include <ArduinoJson.h>
 #include <NTPClient.h> //https://github.com/taranais/NTPClient
 
-const char* ssid = "Embasa USA-M";
-const char* password = "Sup0rt3!@#";
-//const char* ssid = "EET2";
-//const char* password = "35452328";
+// const char* ssid = "Embasa USA-M";
+// const char* password = "Sup0rt3!@#";
+const char* ssid = "BARRA DO GIL 4";
+const char* password = "36112907";
 
 // Initialize Telegram BOT
 String BOTtoken = "5875114157:AAHahh0XbtDqGJhm6DH9cS2sjfHdZEEJgbo";  // your Bot Token (Get from Botfather)
-String CHAT_ID = "984798692";
-//String CHAT_ID = "-1001435698283";
+// String CHAT_ID = "984798692";
+String CHAT_ID = "-1001851643135";
 
 bool sendPhoto = false;
 
@@ -133,16 +133,16 @@ void handleNewMessages(int numNewMessages) {
     String from_name = bot.messages[i].from_name;
     if (text == "/start") {
       String welcome = "Bem-vindo, " + from_name + "\n";
-      welcome += "Use os comandos abaixo para interagir com o sistema de vigilância:\n";
+      welcome += "Use os comandos abaixo para interagir com o sistema de vigilância da EEE BG04:\n";
       welcome += "/foto : tira uma foto\n";
-      welcome += "/flash : aciona o FLASH interno\n";
+      // welcome += "/flash : aciona o FLASH interno\n";
       bot.sendMessage(CHAT_ID, welcome, "");
     }
-    if (text == "/flash") {
-      flashState = !flashState;
-      digitalWrite(FLASH_LED_PIN, flashState);
-      Serial.println("Change flash LED state");
-    }
+    // if (text == "/flash") {
+    //   flashState = !flashState;
+    //   digitalWrite(FLASH_LED_PIN, flashState);
+    //   Serial.println("Change flash LED state");
+    // }
     if (text == "/foto") {
       sendPhoto = true;
       Serial.println("New photo request");
@@ -313,11 +313,11 @@ void loop() {
   // }
 
   if (sendPhoto) {
-    digitalWrite(FLASH_LED_PIN, HIGH);
+    // digitalWrite(FLASH_LED_PIN, HIGH);
     Serial.println("Preparing photo");
     bot.sendMessage(CHAT_ID, "Preparando foto para envio. Aguarde!", "");
     sendPhotoTelegram();
-    digitalWrite(FLASH_LED_PIN, LOW); 
+    // digitalWrite(FLASH_LED_PIN, LOW); 
     sendPhoto = false; 
   }
   if (millis() > lastTimeBotRan + botRequestDelay)  {
@@ -341,7 +341,7 @@ void loop() {
         String(a) = String(hora);
         String(b) = String(minuto);
         delay(60000);
-        bot.sendMessage(CHAT_ID, "Testando a Comunicação...","");
+        bot.sendMessage(CHAT_ID, "Testando a Comunicação com a EEE BG04...","");
         Serial.println("Enviando imagem capturada...");
         sendPhotoTelegram() ;     
         }
