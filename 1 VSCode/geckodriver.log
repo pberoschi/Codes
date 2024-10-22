@@ -1,0 +1,445 @@
+1729620400221	geckodriver	INFO	Listening on 127.0.0.1:58121
+1729620403332	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58122" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofileoFkwnL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729620403963	Marionette	INFO	Marionette enabled
+1729620404183	Marionette	INFO	Listening on port 58132
+WebDriver BiDi listening on ws://127.0.0.1:58122
+Read port: 58132
+1729620404463	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729620415727	Marionette	INFO	Stopped listening on port 58132
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotAllowedError: Could not write to `C:\Users\Johnny\AppData\Local\Temp\rust_mozprofileoFkwnL\sessionCheckpoints.json': could not move overwite with temporary file: Could not move `C:\Users\Johnny\AppData\Local\Temp\rust_mozprofileoFkwnL\sessionCheckpoints.json.tmp' to `C:\Users\Johnny\AppData\Local\Temp\rust_mozprofileoFkwnL\sessionCheckpoints.json' (NS_ERROR_FILE_ACCESS_DENIED)
+JavaScript error: , line 0: NotAllowedError: Could not write to `C:\Users\Johnny\AppData\Local\Temp\rust_mozprofileoFkwnL\sessionCheckpoints.json': could not move overwite with temporary file: Could not move `C:\Users\Johnny\AppData\Local\Temp\rust_mozprofileoFkwnL\sessionCheckpoints.json.tmp' to `C:\Users\Johnny\AppData\Local\Temp\rust_mozprofileoFkwnL\sessionCheckpoints.json' (NS_ERROR_FILE_ACCESS_DENIED)
+1729620564100	geckodriver	INFO	Listening on 127.0.0.1:58206
+1729620567174	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58207" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofilevQ7NKa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729620567846	Marionette	INFO	Marionette enabled
+1729620568041	Marionette	INFO	Listening on port 58215
+WebDriver BiDi listening on ws://127.0.0.1:58207
+Read port: 58215
+1729620568306	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729620575560	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bBr4itKn7GH36s49-bSDDCoVjLXjnX63JY8XHPWnGls.js line 2 > eval line 5711 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js, line 1375: Script terminated by timeout at:
+z@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:1375:232
+ytRendererBehaviorDataObserver_@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:7751:260
+JMa@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3901:119
+Tr@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3883:218
+Wr</a.prototype._propertiesChanged@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3935:124
+xgb</b.prototype._propertiesChanged@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:7054:309
+ZLa</b.prototype._flushProperties@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3806:200
+Wr</a.prototype._invalidateProperties@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3927:69
+ZLa</b.prototype._definePropertyAccessor/<.set<@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3796:71
+flushRenderStamperComponentBindings_@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:8343:48
+stampDomArraySplices_@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:8331:449
+rendererStamperApplyChangeRecord_@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:8327:11
+rendererStamperObserver_@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:8324:149
+JMa@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3901:119
+Tr@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3883:218
+Wr</a.prototype._propertiesChanged@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3935:124
+xgb</b.prototype._propertiesChanged@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:7054:309
+ZLa</b.prototype._flushProperties@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3806:200
+Wr</a.prototype._invalidateProperties@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3927:69
+Wr</a.prototype.notifyPath@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3950:182
+VMa@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3908:91
+Ur@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3909:29
+Wr</a.prototype.push@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:3945:130
+fillRange_@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:15820:117
+renderChunk_@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:15824:180
+f$a/this.wrappedJob@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:6413:205
+S@https://www.youtube.com/s/desktop/ee1428e3/jsbin/scheduler.vflset/scheduler.js:45:19
+V@https://www.youtube.com/s/desktop/ee1428e3/jsbin/scheduler.vflset/scheduler.js:54:415
+g.S@https://www.youtube.com/s/desktop/ee1428e3/jsbin/scheduler.vflset/scheduler.js:50:84
+window.requestAnimationFrame/<@https://www.youtube.com/s/desktop/ee1428e3/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js:96:192
+
+1729620580275	Marionette	INFO	Stopped listening on port 58215
+Dynamically enable window occlusion 1
+1729620820516	geckodriver	INFO	Listening on 127.0.0.1:58669
+1729620823571	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58670" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofileWAtLN3"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729620824173	Marionette	INFO	Marionette enabled
+1729620824357	Marionette	INFO	Listening on port 58680
+WebDriver BiDi listening on ws://127.0.0.1:58670
+Read port: 58680
+1729620824559	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+1729620883761	geckodriver	INFO	Listening on 127.0.0.1:58744
+1729620886820	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58745" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofile3f0D1V"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729620887260	Marionette	INFO	Marionette enabled
+1729620887435	Marionette	INFO	Listening on port 58756
+WebDriver BiDi listening on ws://127.0.0.1:58745
+Read port: 58756
+1729620887614	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729621194512	Marionette	INFO	Stopped listening on port 58756
+Dynamically enable window occlusion 1
+1729621204264	geckodriver	INFO	Listening on 127.0.0.1:58863
+1729621207333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58864" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofileHeCS18"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621207835	Marionette	INFO	Marionette enabled
+1729621208026	Marionette	INFO	Listening on port 58872
+WebDriver BiDi listening on ws://127.0.0.1:58864
+Read port: 58872
+1729621208211	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729621236650	Marionette	INFO	Stopped listening on port 58872
+Dynamically enable window occlusion 1
+1729621250675	geckodriver	INFO	Listening on 127.0.0.1:58911
+1729621253754	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58912" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofileytgE2K"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621254199	Marionette	INFO	Marionette enabled
+1729621254387	Marionette	INFO	Listening on port 58919
+WebDriver BiDi listening on ws://127.0.0.1:58912
+Read port: 58919
+1729621254649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+1729621288461	geckodriver	INFO	Listening on 127.0.0.1:58951
+1729621291526	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58952" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofileDNu4UQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621291995	Marionette	INFO	Marionette enabled
+1729621292199	Marionette	INFO	Listening on port 58971
+WebDriver BiDi listening on ws://127.0.0.1:58952
+Read port: 58971
+1729621292512	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729621309925	Marionette	INFO	Stopped listening on port 58971
+Dynamically enable window occlusion 1
+1729621354945	geckodriver	INFO	Listening on 127.0.0.1:59115
+1729621357983	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59116" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofile7KbTaX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621358597	Marionette	INFO	Marionette enabled
+1729621358798	Marionette	INFO	Listening on port 59123
+WebDriver BiDi listening on ws://127.0.0.1:59116
+Read port: 59123
+1729621359007	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729621383005	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1729621399194	Marionette	INFO	Stopped listening on port 59123
+Dynamically enable window occlusion 1
+1729621401969	geckodriver	INFO	Listening on 127.0.0.1:59156
+1729621405005	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59157" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofileWYb3VY"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621405453	Marionette	INFO	Marionette enabled
+1729621405674	Marionette	INFO	Listening on port 59165
+WebDriver BiDi listening on ws://127.0.0.1:59157
+Read port: 59165
+1729621405875	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729621422111	Marionette	INFO	Stopped listening on port 59165
+Dynamically enable window occlusion 1
+1729621446999	geckodriver	INFO	Listening on 127.0.0.1:59233
+1729621450050	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59234" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofileJhSSx8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621450464	Marionette	INFO	Marionette enabled
+1729621450641	Marionette	INFO	Listening on port 59241
+WebDriver BiDi listening on ws://127.0.0.1:59234
+Read port: 59241
+1729621450845	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://hide.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://hide.me."
+JavaScript error: https://nl.hideproxy.me/go.php?u=V10RJJIf0MRE1wJSP0rA4H%2FEK%2F%2BJKC%2BfjCdBGwCVbo%2BCZ3CXBUFkOJ8OxLaUhAhvn%2BNa1NctuI31cPfn1FU07XB%2BIfeYoPouZt%2FI%2Fntfvf0ChyUPTt1bWv%2Fd9vDZZz1hbCydWl5AegSKfQVqkOsf3uvbjBhkFG7F7ozkninlfw5ZdONBXdMEpyLVys4RgKPQY9v03e4y6bvR7AyjgEGjxulNk6db2Ipgp5AdoASo7hv6OcPhguLhRVky2KEk2VlvUHJWwIb6GBzn2NVLG8GFsXoXgIgn28bhKBqoP231YuEfzDixqJIg5iKkxRwImV%2B9hVoWyQ%3D%3D&b=5&f=frame, line 397: SyntaxError: unexpected token: ')'
+JavaScript error: https://nl.hideproxy.me/go.php?u=V10RJJIf0MRE1wJSP0rA4H%2FEK%2F%2BJKC%2BfjCdBGwCVbo%2BCZ3CXBUFkOJ8OxLaUhAhvn%2BNa1NctuI31cPfn1FU07XB%2BIfeYoPouZt%2FI%2Fntfvf0ChyUPTt1bWv%2Fd9vDZZz1hbCydWl5AegSKfQVqkOsc3uvbjBhkFG7F7ozkninlfw5ZdONBXdMEpyLVys4RgKPQY9v03e4y6bvR7AyjgEGjxulNk6db2Ipgp5AdoASo7hv6OcPhguLhRVky2KEk2VlvUHJWwIb6GBzn2NVLG8GFsH0Qmo4okOLFN0CYBz2pW%2Bo0uGuetbkivCeW4xwImV%2B9hVoWyQ%3D%3D&b=5&f=frame, line 397: SyntaxError: unexpected token: ')'
+1729621530091	Marionette	INFO	Stopped listening on port 59241
+Dynamically enable window occlusion 1
+1729621679005	geckodriver	INFO	Listening on 127.0.0.1:59340
+1729621682055	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59341" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofileZMrCey"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621682587	Marionette	INFO	Marionette enabled
+1729621682779	Marionette	INFO	Listening on port 59351
+WebDriver BiDi listening on ws://127.0.0.1:59341
+Read port: 59351
+1729621683075	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.4everproxy.com/ line 1 > injectedScript, line 1: ReferenceError: $ is not defined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EZ_UdT5qJoF2ohNlCVobLfxs-tbO9R9IpIq9iZAEJf8.js line 2 > eval line 687 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bBr4itKn7GH36s49-bSDDCoVjLXjnX63JY8XHPWnGls.js line 2 > eval line 1772 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bBr4itKn7GH36s49-bSDDCoVjLXjnX63JY8XHPWnGls.js line 2 > eval line 3148 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EZ_UdT5qJoF2ohNlCVobLfxs-tbO9R9IpIq9iZAEJf8.js line 2 > eval line 1617 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EZ_UdT5qJoF2ohNlCVobLfxs-tbO9R9IpIq9iZAEJf8.js line 2 > eval line 2119 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://vh.4everproxy.com/direct/aHR0cHM6Ly9jLmFkc2NvLnJlLw--+, line 136: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EZ_UdT5qJoF2ohNlCVobLfxs-tbO9R9IpIq9iZAEJf8.js line 2 > eval line 2936 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EZ_UdT5qJoF2ohNlCVobLfxs-tbO9R9IpIq9iZAEJf8.js line 2 > eval line 6178 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EZ_UdT5qJoF2ohNlCVobLfxs-tbO9R9IpIq9iZAEJf8.js line 2 > eval line 4141 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1729621796846	geckodriver	INFO	Listening on 127.0.0.1:59610
+1729621799874	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59611" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofile0LduiH"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621800503	Marionette	INFO	Marionette enabled
+1729621800682	Marionette	INFO	Listening on port 59619
+Read port: 59619
+WebDriver BiDi listening on ws://127.0.0.1:59611
+1729621800791	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1729621807773	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1729621834540	Marionette	INFO	Stopped listening on port 59619
+Dynamically enable window occlusion 1
+1729621840943	geckodriver	INFO	Listening on 127.0.0.1:59659
+1729621843985	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59660" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Johnny\\AppData\\Local\\Temp\\rust_mozprofilef7hJOr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1729621844416	Marionette	INFO	Marionette enabled
+1729621844582	Marionette	INFO	Listening on port 59668
+WebDriver BiDi listening on ws://127.0.0.1:59660
+Read port: 59668
+1729621844778	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bBr4itKn7GH36s49-bSDDCoVjLXjnX63JY8XHPWnGls.js line 2 > eval line 510 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bBr4itKn7GH36s49-bSDDCoVjLXjnX63JY8XHPWnGls.js line 2 > eval line 3811 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EZ_UdT5qJoF2ohNlCVobLfxs-tbO9R9IpIq9iZAEJf8.js line 2 > eval line 6029 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js, line 79: Script terminated by timeout at:
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:304
+hd/</d<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1608
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1226
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+hd/</d<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1608
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1226
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+hd/</d<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1608
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1226
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+hd/</d<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1608
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1226
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+hd/</d<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1608
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1226
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:709
+M.prototype.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1262
+n.unsubscribe@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:79:356
+hd/</d<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:92:1608
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript warning: https://www.youtube.com/s/player/606a66b3/player_ias.vflset/pt_BR/base.js, line 11291: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript warning: https://www.youtube.com/s/player/606a66b3/player_ias.vflset/pt_BR/base.js, line 11291: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.sys.mjs, line 514: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript warning: https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js, line 1946: Script terminated by timeout at:
+Ql.prototype.transition@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:1946:33
+HI/<@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:11181:114
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bBr4itKn7GH36s49-bSDDCoVjLXjnX63JY8XHPWnGls.js line 2 > eval line 4605 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.google.com/js/th/IJhwbK6X-i0aSQsKp1U3hsnnNknGAHH8uGjszq9fxxM.js line 2 > eval line 7323 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js, line 1946: Script terminated by timeout at:
+Ql.prototype.transition@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:1946:33
+HI/<@https://www.youtube.com/s/desktop/ee1428e3/jsbin/desktop_polymer.vflset/desktop_polymer.js:11181:114
+
+JavaScript error: resource://gre/actors/AudioPlaybackChild.sys.mjs, line 17: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1729622003257	Marionette	INFO	Stopped listening on port 59668
+Dynamically enable window occlusion 1
