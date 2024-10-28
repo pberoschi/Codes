@@ -126,7 +126,6 @@ if not mt5.initialize():
 # 'VIVT3',
 # 'WEGE3',
 # 'YDUQ3',
-
 # ] 
 
 
