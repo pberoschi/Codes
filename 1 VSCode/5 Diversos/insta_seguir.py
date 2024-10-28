@@ -2,7 +2,7 @@ from selenium import webdriver as wb
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.keys import Keys
 from time import sleep
-import instaloader
+# import instaloader
 import random 
 from random import randint 
 import os.path
