@@ -10,27 +10,28 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 
 # Acessando dados externos de usuario e senha
-dados = open('C:\\Users\johnn\\Google Drive\\Pessoal\\1_Programacao\\Python Scripts\\2_Dados\\dados_MT5_Clear.txt', 'r', encoding='utf-8')
+dados = open('C:\\Users\\Johnny\\Documents\\1_DEV\\Dados\\DadosMeta_5031093261.txt', 'r', encoding='utf-8')
 leitura = dados.readlines()
 usuario = leitura[0]
 senha = leitura[1]
-#print(f'Usuário: {usuario}'.strip())
-#print(f'Senha: {senha}')
+# print(f'Usuário: {usuario}'.strip())
+# print(f'Senha: {senha}')
 dados.close() 
 
 
 # Abrindo MT5
 agora = datetime.now()
 #print(f'Buscando dados...{agora}')
-#if not mt5.initialize(login=54679378, server="MetaQuotes-Demo", password=""):
-if not mt5.initialize(login=1092947504, server="ClearInvestimentos-DEMO", password=senha):
+# if not mt5.initialize(login=54679378, server="MetaQuotes-Demo", password=""):
+if not mt5.initialize():
+# if not mt5.initialize(login=1092947504, server="ClearInvestimentos-DEMO", password=senha):
     print("initialize() failed, error code =",mt5.last_error())
     quit()
 
 # Buscando lisa externa com os ativos
-dados = open('C:\\Users\johnn\\Google Drive\\Pessoal\\1_Programacao\\Python Scripts\\2_Dados\\lista_Ativos_MT5.txt', 'r', encoding='utf-8')
-ativos = dados.readlines()
-dados.close() 
+# dados = open('C:\\Users\johnn\\Google Drive\\Pessoal\\1_Programacao\\Python Scripts\\2_Dados\\lista_Ativos_MT5.txt', 'r', encoding='utf-8')
+# ativos = dados.readlines()
+# dados.close() 
 
 # symbols = [
 # 'ABEV3',
@@ -130,24 +131,30 @@ dados.close()
 
 
 symbols = [
-'ABEV3',
-'ALPA4',
-'AMER3',
-'ARZZ3',
+'EURUSD',
+'XAUUSD',
+'USDJPY',
+'GBPUSD',
+'AUDUSD',
+'USDCAD',
+'NZDUSD',
+'USDCHF',
+'USDHKD',
+'XAUEUR'
 ]
 
 print('Analisando dados. Aguarde!')
 for symbol in symbols:
     ### OBTENÇÃO DOS DADOS
-    #ratesMAIOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_D1, 0, 210)
-    ratesMAIOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_W1, 0, 210)
+    ratesMAIOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_D1, 0, 210)
+    # ratesMAIOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_W1, 0, 210)
     rates_MAIOR = pd.DataFrame(ratesMAIOR)
     rates_MAIOR['time']=pd.to_datetime(rates_MAIOR['time'], unit='s')
     resumoMAIOR = rates_MAIOR[['time','open','high','low','close','tick_volume']]
     #resumoMENOR.tail()
 
-    #ratesMENOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_H1, 0, 210)
-    ratesMENOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_D1, 0, 210)
+    ratesMENOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_H1, 0, 210)
+    # ratesMENOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_D1, 0, 210)
     rates_MENOR = pd.DataFrame(ratesMENOR)
     rates_MENOR['time']=pd.to_datetime(rates_MENOR['time'], unit='s')
     resumoMENOR = rates_MENOR[['time','open','high','low','close','tick_volume']]
@@ -197,7 +204,7 @@ for symbol in symbols:
     if resumoFINAL['histog'].iloc[-2] > resumoFINAL['histog'].iloc[-3]:
         if resumoFINAL['close'].iloc[-2] > resumoFINAL['MME13'].iloc[-2]:
             if resumoFINAL['Estoc'].iloc[-2] <= 50:
-                if resumoFINAL['tick_volume'].iloc[-2] >= 200000:
+                if resumoFINAL['tick_volume'].iloc[-2] >= 00000:
                     resumoFINAL['Sinal'].iloc[-2] = 'COMPRA'
                     print(f'{symbol}: COMPRA')
                     #print(resumoFINAL)
@@ -205,11 +212,11 @@ for symbol in symbols:
     elif resumoFINAL['histog'].iloc[-2] < resumoFINAL['histog'].iloc[-3]:
         if resumoFINAL['close'].iloc[-2] < resumoFINAL['MME13'].iloc[-2]:
             if resumoFINAL['Estoc'].iloc[-2] >= 50:
-                if resumoFINAL['tick_volume'].iloc[-2] >= 200000:
+                if resumoFINAL['tick_volume'].iloc[-2] >= 00000:
                     resumoFINAL['Sinal'].iloc[-2] = 'VENDA'
                     print(f'{symbol}: VENDA')
                     #print(resumoFINAL)
-    #print(symbol)
-    #print(resumoFINAL)
+    # print(symbol)
+    # print(resumoFINAL)
 
 print(f'Total dos papeis analisados: {len(symbols)}')
