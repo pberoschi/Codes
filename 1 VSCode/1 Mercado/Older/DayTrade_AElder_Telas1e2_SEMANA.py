@@ -10,13 +10,13 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 
 # Acessando dados externos de usuario e senha
-dados = open('C:\\Users\\Johnny\\Documents\\1_DEV\\Dados\\DadosMeta_5031093261.txt', 'r', encoding='utf-8')
-leitura = dados.readlines()
-usuario = leitura[0]
-senha = leitura[1]
+# dados = open('C:\\Users\\Johnny\\Documents\\1_DEV\\Dados\\DadosMeta_5031093261.txt', 'r', encoding='utf-8')
+# leitura = dados.readlines()
+# usuario = leitura[0]
+# senha = leitura[1]
 # print(f'Usuário: {usuario}'.strip())
 # print(f'Senha: {senha}')
-dados.close() 
+# dados.close() 
 
 
 # Abrindo MT5
@@ -140,6 +140,8 @@ symbols = [
 'USDCHF',
 'USDHKD',
 'XAUEUR'
+# 'IBOV'
+# 'US500'
 ]
 
 print('Analisando dados. Aguarde!')
@@ -206,7 +208,7 @@ for symbol in symbols:
                 if resumoFINAL['tick_volume'].iloc[-2] >= 00000:
                     resumoFINAL['Sinal'].iloc[-2] = 'COMPRA'
                     print(f'{symbol}: COMPRA')
-                    #print(resumoFINAL)
+                    # print(resumoFINAL)
         
     elif resumoFINAL['histog'].iloc[-2] < resumoFINAL['histog'].iloc[-3]:
         if resumoFINAL['close'].iloc[-2] < resumoFINAL['MME13'].iloc[-2]:
@@ -214,7 +216,7 @@ for symbol in symbols:
                 if resumoFINAL['tick_volume'].iloc[-2] >= 00000:
                     resumoFINAL['Sinal'].iloc[-2] = 'VENDA'
                     print(f'{symbol}: VENDA')
-                    #print(resumoFINAL)
+                    # print(resumoFINAL)
     # print(symbol)
     # print(resumoFINAL)
 
