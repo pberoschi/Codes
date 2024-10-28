@@ -2,37 +2,37 @@ void teleg()
 {    
 //--------------------------------------------------> FASE R <--------------------------------------------------
 
-  // PZEM004Tv30 pzem(Serial1, R_RX1, R_TX1); 
+  PZEM004Tv30 pzemR(Serial1, R_RX1, R_TX1); 
   
-  // int   tensao_R      = pzem.voltage();
-  // float corrente_R    = pzem.current();
-  // float potencia_R    = pzem.power();                    // ---> LEITURA DIRETA DO TRANSDUTOR <---
-  // float consumo_R     = pzem.energy();
-  // int   frequencia_R  = pzem.frequency();
-  // float fp_R          = pzem.pf() / 100.0;
+  int   tensao_R      = pzemR.voltage();
+  float corrente_R    = pzemR.current();
+  float potencia_R    = pzemR.power();                    // ---> LEITURA DIRETA DO TRANSDUTOR <---
+  float consumo_R     = pzemR.energy();
+  int   frequencia_R  = pzemR.frequency();
+  float fp_R          = pzemR.pf() / 100.0;
 
-  //   // Print the values to the Serial console
-  //   Serial.print("Tensão_R: ");        Serial.print(tensao_R);           Serial.println("V");
-  //   Serial.print("Corrente_R: ");      Serial.print(corrente_R);         Serial.println("A");
-  //   Serial.print("Potencia_R: ");      Serial.print(potencia_R);         Serial.println("W");
-  //   Serial.print("Consumo_R: ");       Serial.print(consumo_R,3);        Serial.println("kWh");
-  //   Serial.print("Frequencia_R: ");    Serial.print(frequencia_R, 1);    Serial.println("Hz");
-  //   Serial.print("FP_R: ");            Serial.println(fp_R);
+    // Print the values to the Serial console
+    Serial.print("Tensão_R: ");        Serial.print(tensao_R);           Serial.println("V");
+    Serial.print("Corrente_R: ");      Serial.print(corrente_R);         Serial.println("A");
+    Serial.print("Potencia_R: ");      Serial.print(potencia_R);         Serial.println("W");
+    Serial.print("Consumo_R: ");       Serial.print(consumo_R,3);        Serial.println("kWh");
+    Serial.print("Frequencia_R: ");    Serial.print(frequencia_R, 1);    Serial.println("Hz");
+    Serial.print("FP_R: ");            Serial.println(fp_R);
 
-  // Serial.println();
-  // delay(100);
+  Serial.println();
+  delay(100);
 
   // ------------------------------------------------------ (TESTES // Gerador de números aleatórios)-------// 
 
-  int tensao_R         = random(380,400);
-  int corrente_R       = random(80,98);
-  int potencia_R       = random(5500,7800);              
-  int consumo_R        = random(1080,1098);
-  int frequencia_R     = random(57,60);
-  float fp_R           = random(92,98) / 100.0;
+  // int tensao_R         = random(380,400);
+  // int corrente_R       = random(80,98);
+  // int potencia_R       = random(5500,7800);              
+  // int consumo_R        = random(1080,1098);
+  // int frequencia_R     = random(57,60);
+  // float fp_R           = random(92,98) / 100.0;
   // -------------------------------------------------------------------------------------------------------//
   
-  String(a_R) = String("*** DADOS DA ETE/EEE3 MSP ***\n\n>>> FASE R <<<\n- Tensão: ");
+  String(a_R) = String("*** DADOS DA EEE BG04 ***\n\n>>> FASE R <<<\n- Tensão: ");
   String(b_R) = String(tensao_R);
   String(c_R) = String(" VCA");
 
@@ -66,33 +66,33 @@ void teleg()
 
 //--------------------------------------------------> FASE S <--------------------------------------------------
 
-  // PZEM004Tv30 pzem(Serial1, S_RX2, S_TX2); 
+  PZEM004Tv30 pzemS(Serial1, S_RX2, S_TX2); 
   
-  // int   tensao_S      = pzem.voltage();
-  // float corrente_S    = pzem.current();
-  // float potencia_S    = pzem.power();                    // ---> LEITURA DIRETA DO TRANSDUTOR <---
-  // float consumo_S     = pzem.energy();
-  // int   frequencia_S  = pzem.frequency();
-  // float fp_S          = pzem.pf() / 100.0;
+  int   tensao_S      = pzemS.voltage();
+  float corrente_S    = pzemS.current();
+  float potencia_S    = pzemS.power();                    // ---> LEITURA DIRETA DO TRANSDUTOR <---
+  float consumo_S     = pzemS.energy();
+  int   frequencia_S  = pzemS.frequency();
+  float fp_S          = pzemS.pf() / 100.0;
 
-  //   // Print the values to the Serial console
-  //   Serial.print("Tensão_S: ");        Serial.print(tensao_S);           Serial.println("V");
-  //   Serial.print("Corrente_S: ");      Serial.print(corrente_S);         Serial.println("A");
-  //   Serial.print("Potencia_S: ");      Serial.print(potencia_S);         Serial.println("W");
-  //   Serial.print("Consumo_S: ");       Serial.print(consumo_S,3);        Serial.println("kWh");
-  //   Serial.print("Frequencia_S: ");    Serial.print(frequencia_S, 1);    Serial.println("Hz");
-  //   Serial.print("FP_S: ");            Serial.println(fp_S);
+    // Print the values to the Serial console
+    Serial.print("Tensão_S: ");        Serial.print(tensao_S);           Serial.println("V");
+    Serial.print("Corrente_S: ");      Serial.print(corrente_S);         Serial.println("A");
+    Serial.print("Potencia_S: ");      Serial.print(potencia_S);         Serial.println("W");
+    Serial.print("Consumo_S: ");       Serial.print(consumo_S,3);        Serial.println("kWh");
+    Serial.print("Frequencia_S: ");    Serial.print(frequencia_S, 1);    Serial.println("Hz");
+    Serial.print("FP_S: ");            Serial.println(fp_S);
 
-  // Serial.println();
-  // delay(100);
+  Serial.println();
+  delay(100);
 
   // ------------------------------------------------------ (TESTES // Gerador de números aleatórios)-------//    
-  int tensao_S         = random(380,400);
-  int corrente_S       = random(80,98);
-  int potencia_S      = random(5500,7800);       
-  int consumo_S        = random(1080,1098);
-  int frequencia_S     = random(57,60);
-  float fp_S           = random(92,98) / 100.0;
+  // int tensao_S         = random(380,400);
+  // int corrente_S       = random(80,98);
+  // int potencia_S      = random(5500,7800);       
+  // int consumo_S        = random(1080,1098);
+  // int frequencia_S     = random(57,60);
+  // float fp_S           = random(92,98) / 100.0;
     
   //  Serial.println("Dados FASE S enviados");
   //  delay(100);
@@ -132,33 +132,33 @@ void teleg()
 
 //--------------------------------------------------> FASE T <--------------------------------------------------
 
-  // PZEM004Tv30 pzem(Serial1, T_RX3, S_TX3); 
+  PZEM004Tv30 pzemT(Serial1, T_RX3, T_TX3); 
   
-  // int   tensao_T      = pzem.voltage();
-  // float corrente_T    = pzem.current();
-  // float potencia_T    = pzem.power();                    // ---> LEITURA DIRETA DO TRANSDUTOR <---
-  // float consumo_T     = pzem.energy();
-  // int   frequencia_T  = pzem.frequency();
-  // float fp_T          = pzem.pf() / 100.0;
+  int   tensao_T      = pzemT.voltage();
+  float corrente_T    = pzemT.current();
+  float potencia_T    = pzemT.power();                    // ---> LEITURA DIRETA DO TRANSDUTOR <---
+  float consumo_T     = pzemT.energy();
+  int   frequencia_T  = pzemT.frequency();
+  float fp_T          = pzemT.pf() / 100.0;
 
-  //   // Print the values to the Serial console
-  //   Serial.print("Tensão_T: ");        Serial.print(tensao_T);           Serial.println("V");
-  //   Serial.print("Corrente_T: ");      Serial.print(corrente_T);         Serial.println("A");
-  //   Serial.print("Potencia_T: ");      Serial.print(potencia_T);         Serial.println("W");
-  //   Serial.print("Consumo_T: ");       Serial.print(consumo_T,3);        Serial.println("kWh");
-  //   Serial.print("Frequencia_T: ");    Serial.print(frequencia_T, 1);    Serial.println("Hz");
-  //   Serial.print("FP_T: ");            Serial.println(fp_T);
+    // Print the values to the Serial console
+    Serial.print("Tensão_T: ");        Serial.print(tensao_T);           Serial.println("V");
+    Serial.print("Corrente_T: ");      Serial.print(corrente_T);         Serial.println("A");
+    Serial.print("Potencia_T: ");      Serial.print(potencia_T);         Serial.println("W");
+    Serial.print("Consumo_T: ");       Serial.print(consumo_T,3);        Serial.println("kWh");
+    Serial.print("Frequencia_T: ");    Serial.print(frequencia_T, 1);    Serial.println("Hz");
+    Serial.print("FP_T: ");            Serial.println(fp_T);
 
-  // Serial.println();
-  // delay(100);
+  Serial.println();
+  delay(100);
 
   // ------------------------------------------------------ (TESTES // Gerador de números aleatórios)-------//    
-  int tensao_T         = random(380,400);
-  int corrente_T       = random(80,98);
-  int potencia_T       = random(5500,7800);             
-  int consumo_T        = random(1080,1098);
-  int frequencia_T     = random(57,60);
-  float fp_T           = random(92,98) / 100.0;
+  // int tensao_T         = random(380,400);
+  // int corrente_T       = random(80,98);
+  // int potencia_T       = random(5500,7800);             
+  // int consumo_T        = random(1080,1098);
+  // int frequencia_T     = random(57,60);
+  // float fp_T           = random(92,98) / 100.0;
     
   //  Serial.println("Dados FASE T enviados");
   //  delay(100);

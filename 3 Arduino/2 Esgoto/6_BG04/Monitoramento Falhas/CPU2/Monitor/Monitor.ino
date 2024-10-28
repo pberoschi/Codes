@@ -1,6 +1,5 @@
 
 // Envio para o sheets e TELEGRAM / TRIFASICO
-
 #include <PZEM004Tv30.h>
 #include <HTTPClient.h>
 #include <WiFi.h>
@@ -12,26 +11,33 @@ int S_RX2 = 22;
 int S_TX2 = 23;
 int T_RX3 = 12;
 int T_TX3 = 14;
+
+int CMB1 = 25;
+int CMB2 = 26;
+
 int intervaloLEIT = 2000;
 int IntervaloSEND = 0;
 
-
 #define ledPin 2
 int x;
-// const char* ssid     = "Embasa USA-M";     // your network SSID (name of wifi network)
-// const char* password = "Sup0rt3!@#";       // your network password
-// const char* ssid     = "Galaxy";     // your network SSID (name of wifi network)
-// const char* password = "43215678";       // your network password
-const char* ssid     = "ILHOTA/0";     // your network SSID (name of wifi network)
-const char* password = "ILHOTA-0";       // your network password
-char *server = "script.google.com";        // Server URL
-//char *GScriptId = "AKfycbzbqkAso7d__JfhwxLiIh5PHZRoCB9tFjLhLIYXvbqTZ23DhecSOtCxUfq7481uFP8ajA"; //planilha teste    
-char *GScriptId = "AKfycbzJlu4MV5HRD-eTHU_pyDdakLJbfVOn7D43vRP6EuBgbbR1VKfhj5utvwsO-0I27N0Yyg"; //planilha teste            
+const char* ssid     = "Embasa USA-M";
+const char* password = "Sup0rt3!@#";
+// const char* ssid     = "BARRA DO GIL 4";
+// const char* password = "36112907";
+char *server = "script.google.com";        // Server URL  
+char *GScriptId = "AKfycbzl6a2oUrvPiq1L6c-eu2yPgeUnnpQWcuvkKQnkUG6wjTGJPR-C6b6tmWZl5oqDgakxaw";         
 const int httpsPort = 443;
-WiFiClientSecure client;
+// WiFiClientSecure client;
 
 
 // ---> Envio TELEGRAM <--- //
+#define WIFI_SSID ssid
+#define WIFI_PASSWORD password
+#define BOT_TOKEN "5875114157:AAHahh0XbtDqGJhm6DH9cS2sjfHdZEEJgbo"
+//#define CHAT_ID "984798692"
+#define CHAT_ID "-1001851643135"
+
+
 #include <WiFiClientSecure.h>
 #include <UniversalTelegramBot.h>
 #include <ArduinoJson.h>
@@ -47,28 +53,33 @@ const String STATS = "status";
 const String HOUR = "hora";
 uint32_t lastCheckTime = 0;
 
-//#define WIFI_SSID "E.E.E"
-//#define WIFI_PASSWORD "GAMBOA-0"
-#define WIFI_SSID "Embasa USA-M"
-#define WIFI_PASSWORD "Sup0rt3!@#"
-//#define BOT_TOKEN "5875114157:AAHahh0XbtDqGJhm6DH9cS2sjfHdZEEJgbo"
-//#define CHAT_ID "984798692"
-//#define CHAT_ID "-1001851643135"
-#define BOT_TOKEN "6365824444:AAHQ2esU_ggjNyClx7FudZ4IEVJzH4fs5gM"
-#define CHAT_ID "-4096352251"
-
 WiFiClientSecure secured_client;
 UniversalTelegramBot bot(BOT_TOKEN, secured_client);
 WiFiUDP ntpUDP;
 NTPClient ntp(ntpUDP);
+
+
+// Leitura Analogica NIVEL 
+#define ANALOG_PIN_0 36 
+int analog_value = 0;
+int read_percent = 0;
+float ref_percent = 100;
+int adc_intervals = 4095;
+
 // --- --- //
 
 
 void setup() {
-    Serial.begin(115200);
+  Serial.begin(115200);
 
   pinMode(ledPin , OUTPUT);
-  digitalWrite(ledPin, LOW); 
+  digitalWrite(ledPin, LOW);
+
+  pinMode(CMB1, INPUT);
+  digitalWrite(CMB1, LOW);
+  pinMode(CMB2, INPUT);
+  digitalWrite(CMB2, LOW);
+
 
   //connect_wifi();
   Serial.print("Connecting to wifi: ");
@@ -114,24 +125,31 @@ void setup() {
 
 void loop() {
 
-    const String datafull = (ntp.getFormattedDate());
-    const int hora = (ntp.getHours());
-    const int minuto = (ntp.getMinutes());
-    const int segundo = (ntp.getSeconds());   
+  const String datafull = (ntp.getFormattedDate());
+  const int hora = (ntp.getHours());
+  const int minuto = (ntp.getMinutes());
+  const int segundo = (ntp.getSeconds());
+
+ 
+  if (ntp.update()) {
+      if ((hora == 8) && (minuto == 0)){
+      //if (minuto == IntervaloSEND){
+      Serial.println("Chamando a função >>> TELEGRAM <<<");
+      teleg();
+      //delay(500);
     
-    if (ntp.update()) {
-        if ((minuto == IntervaloSEND) && (segundo < 8)){
-        //if (minuto == IntervaloSEND){
-        Serial.println("Chamando a função >>> TELEGRAM <<<");
-        teleg();
-        //delay(500);
+    } else {
+      // Serial.println("Chamando a função >>> Google Sheets <<<");
+      sheets();
+      // alea_testes();
+      // Serial.println("Chamando a função >>> Controle Nivel <<<");
+      ctrlNivel();
       
-      } else {
-        Serial.println("Chamando a função >>> Google Sheets <<<");
-        sheets();
-        //delay(500);
-      }    
-    }
+      //delay(500);
+    }    
+  }
+
+  delay(5000);
 }
 
 

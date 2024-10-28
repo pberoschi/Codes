@@ -22,19 +22,6 @@ void sheets()
   Serial.println();
   delay(100);
 
-  // ------------------------------------------------------ (TESTES // Gerador de números aleatórios)-------//    
-  // int tensao_R         = random(380,400);
-  // int corrente_R       = random(80,98);
-  // int potencia_R       = random(5500,7800);              
-  // int consumo_R        = random(1080,1098);
-  // int frequencia_R     = random(57,60);
-  // float fp_R           = random(92,98) / 100.0;
-
-  //  Serial.println("Dados FASE R enviados");
-  //  delay(100);
-  // -------------------------------------------------------------------------------------------------------// 
-
-
 //--------------------------------------------------> FASE S <--------------------------------------------------
 
   PZEM004Tv30 pzemS(Serial1, S_RX2, S_TX2); 
@@ -56,18 +43,6 @@ void sheets()
 
   Serial.println();
   delay(100);
-
-  // ------------------------------------------------------ (TESTES // Gerador de números aleatórios)-------//    
-  // int tensao_S         = random(380,400);
-  // int corrente_S       = random(80,98);
-  // int potencia_S      = random(5500,7800);       
-  // int consumo_S        = random(1080,1098);
-  // int frequencia_S     = random(57,60);
-  // float fp_S           = random(92,98) / 100.0;
-    
-  //  Serial.println("Dados FASE S enviados");
-  //  delay(100);
-  // -------------------------------------------------------------------------------------------------------// 
 
 //--------------------------------------------------> FASE T <--------------------------------------------------
 
@@ -91,42 +66,45 @@ void sheets()
   Serial.println();
   delay(100);
 
-  // ------------------------------------------------------ (TESTES // Gerador de números aleatórios)-------//    
-  // int tensao_T         = random(380,400);
-  // int corrente_T       = random(80,98);
-  // int potencia_T       = random(5500,7800);             
-  // int consumo_T        = random(1080,1098);
-  // int frequencia_T     = random(57,60);
-  // float fp_T           = random(92,98) / 100.0;
-    
-  //  Serial.println("Dados FASE T enviados");
-  //  delay(100);
-  // -------------------------------------------------------------------------------------------------------// 
 
+  // ------------------------------------------------------ (TESTES // Status dos CMB's)-------//
+  int Bomba = 0;
+  if (digitalRead(CMB1) == HIGH) {
+    Bomba = 1;
+  }
+  if (digitalRead(CMB2) == HIGH) {
+    Bomba = 2;
+  }
+  
+  // ----------------------------------------------------------------------------------------------------//    
+  
 
-// -------------------------------------------- ENVIO PARA O SHEETS --------------------------------------------- 
+// ---------------------------------------- ENVIO PARA O SHEETS ----------------------------------------- 
   HTTPClient http;
   String url = String("https://script.google.com") + "/macros/s/" + GScriptId + "/exec?" 
-                + "value20="    + tensao_R 
-                + "&value21="   + corrente_R 
-                + "&value22="   + potencia_R
-                + "&value23="   + consumo_R
-                + "&value24="   + frequencia_R
-                + "&value25="   + fp_R 
+                + "value1="  + tensao_R 
+                + "&value2=" + corrente_R 
+                + "&value3=" + potencia_R
+                + "&value4=" + consumo_R
+                + "&value5=" + frequencia_R
+                + "&value6=" + fp_R 
 
-                + "&value26="   + tensao_S 
-                + "&value27="   + corrente_S
-                + "&value28="   + potencia_S
-                + "&value29="   + consumo_S
-                + "&value30="   + frequencia_S
-                + "&value31="   + fp_S
+                + "&value7="   + tensao_S 
+                + "&value8="  + corrente_S
+                + "&value9="  + potencia_S
+                + "&value10=" + consumo_S
+                + "&value11=" + frequencia_S
+                + "&value12=" + fp_S
 
-                + "&value32="   + tensao_T 
-                + "&value33="   + corrente_T 
-                + "&value34="   + potencia_T
-                + "&value35="   + consumo_T
-                + "&value36="   + frequencia_T
-                + "&value37="   + fp_T;
+                + "&value13="  + tensao_T 
+                + "&value14=" + corrente_T 
+                + "&value15=" + potencia_T
+                + "&value16=" + consumo_T
+                + "&value17=" + frequencia_T
+                + "&value18=" + fp_T
+
+                + "&value19=" + Bomba;
+
 
   Serial.print("Making a request");
   http.begin(url.c_str()); //Specify the URL and certificate

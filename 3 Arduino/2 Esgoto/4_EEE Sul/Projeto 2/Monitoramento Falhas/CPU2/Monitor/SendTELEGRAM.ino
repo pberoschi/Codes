@@ -32,7 +32,7 @@ void teleg()
   // float fp_R           = random(92,98) / 100.0;
   // -------------------------------------------------------------------------------------------------------//
   
-  String(a_R) = String("*** DADOS DA ETE/EEE3 MSP ***\n\n>>> FASE R <<<\n- Tensão: ");
+  String(a_R) = String("*** DADOS DA EEE BG04 ***\n\n>>> FASE R <<<\n- Tensão: ");
   String(b_R) = String(tensao_R);
   String(c_R) = String(" VCA");
 
