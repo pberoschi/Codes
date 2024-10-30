@@ -139,7 +139,8 @@ symbols = [
 'NZDUSD',
 'USDCHF',
 'USDHKD',
-'XAUEUR'
+'XAUEUR',
+'EURJPY'
 ]
 
 print('Analisando dados. Aguarde!')
