@@ -139,14 +139,8 @@ symbols = [
 'NZDUSD',
 'USDCHF',
 'USDHKD',
-<<<<<<< HEAD
 'XAUEUR',
 'EURJPY'
-=======
-'XAUEUR'
-# 'IBOV'
-# 'US500'
->>>>>>> a4a868b926b70ec7dad14446ce976eaca2c716eb
 ]
 
 print('Analisando dados. Aguarde!')
