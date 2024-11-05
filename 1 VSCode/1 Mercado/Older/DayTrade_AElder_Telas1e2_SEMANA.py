@@ -4,6 +4,7 @@ import time
 import telepot
 import pytz
 import pandas as pd
+from time import sleep
 pd.set_option('display.max_columns', 500) # número de colunas
 pd.set_option('display.width', 1500)      # largura máxima da tabela
 pd.options.mode.chained_assignment = None  # default='warn'
@@ -131,7 +132,7 @@ if not mt5.initialize():
 
 symbols = [
 'EURUSD',
-'XAUUSD',
+# 'XAUUSD',
 'USDJPY',
 'GBPUSD',
 'AUDUSD',
@@ -144,80 +145,86 @@ symbols = [
 # 'US500'
 ]
 
-print('Analisando dados. Aguarde!')
-for symbol in symbols:
-    ### OBTENÇÃO DOS DADOS
-    ratesMAIOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_D1, 0, 210)
-    # ratesMAIOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_W1, 0, 210)
-    rates_MAIOR = pd.DataFrame(ratesMAIOR)
-    rates_MAIOR['time']=pd.to_datetime(rates_MAIOR['time'], unit='s')
-    resumoMAIOR = rates_MAIOR[['time','open','high','low','close','tick_volume']]
-    #resumoMENOR.tail()
+try:
+    print('Analisando dados. Aguarde!')
+    for symbol in symbols:
+        ### OBTENÇÃO DOS DADOS
+        print(symbol)
+        ratesMAIOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_D1, 0, 210)
+        # ratesMAIOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_W1, 0, 210)
+        rates_MAIOR = pd.DataFrame(ratesMAIOR)
+        rates_MAIOR['time']=pd.to_datetime(rates_MAIOR['time'], unit='s')
+        resumoMAIOR = rates_MAIOR[['time','open','high','low','close','tick_volume']]
+        #resumoMENOR.tail()
 
-    ratesMENOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_H1, 0, 210)
-    # ratesMENOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_D1, 0, 210)
-    rates_MENOR = pd.DataFrame(ratesMENOR)
-    rates_MENOR['time']=pd.to_datetime(rates_MENOR['time'], unit='s')
-    resumoMENOR = rates_MENOR[['time','open','high','low','close','tick_volume']]
-    #resumoMENOR.tail()
+        ratesMENOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_H1, 0, 210)
+        # ratesMENOR = mt5.copy_rates_from_pos(symbol, mt5.TIMEFRAME_D1, 0, 210)
+        rates_MENOR = pd.DataFrame(ratesMENOR)
+        rates_MENOR['time']=pd.to_datetime(rates_MENOR['time'], unit='s')
+        resumoMENOR = rates_MENOR[['time','open','high','low','close','tick_volume']]
+        #resumoMENOR.tail()
 
-    ### CRIAÇÃO DOS INDICADORES
-    #MME 13 
-    trezeMME = resumoMAIOR['close'].ewm(span=13).mean()
-    resumoMAIOR['MME13'] = trezeMME
+        ### CRIAÇÃO DOS INDICADORES
+        #MME 13 
+        trezeMME = resumoMAIOR['close'].ewm(span=13).mean()
+        resumoMAIOR['MME13'] = trezeMME
 
-    # MACD
-    resumoMAIOR['EMA12'] = resumoMAIOR.close.ewm(span=12).mean()
-    resumoMAIOR['EMA26'] = resumoMAIOR.close.ewm(span=26).mean()
-    resumoMAIOR['MACD'] = resumoMAIOR.EMA12 - resumoMAIOR.EMA26
-    resumoMAIOR['signal'] = resumoMAIOR.MACD.ewm(span=9).mean()
-    resumoMAIOR['histog'] = resumoMAIOR['MACD'] - resumoMAIOR['signal']
+        # MACD
+        resumoMAIOR['EMA12'] = resumoMAIOR.close.ewm(span=12).mean()
+        resumoMAIOR['EMA26'] = resumoMAIOR.close.ewm(span=26).mean()
+        resumoMAIOR['MACD'] = resumoMAIOR.EMA12 - resumoMAIOR.EMA26
+        resumoMAIOR['signal'] = resumoMAIOR.MACD.ewm(span=9).mean()
+        resumoMAIOR['histog'] = resumoMAIOR['MACD'] - resumoMAIOR['signal']
 
-    # CALCULO DO ESTOCASTICO e MME 3
-    n = 8
-    highMax = resumoMENOR['high'].rolling(n).max() 
-    lowMin = resumoMENOR['low'].rolling(n).min()
+        # CALCULO DO ESTOCASTICO e MME 3
+        n = 8
+        highMax = resumoMENOR['high'].rolling(n).max() 
+        lowMin = resumoMENOR['low'].rolling(n).min()
 
-    #estocastico
-    resumoMENOR['estoc %K'] = ((resumoMENOR['close'] - lowMin) / (highMax - lowMin)) * 100
-    resumoMENOR['estoc %D'] = resumoMENOR['estoc %K'].rolling(3).mean()
+        #estocastico
+        resumoMENOR['estoc %K'] = ((resumoMENOR['close'] - lowMin) / (highMax - lowMin)) * 100
+        resumoMENOR['estoc %D'] = resumoMENOR['estoc %K'].rolling(3).mean()
 
-    # estocastico lento a partir do df de menor tempo
-    resumoMENOR["EstocS %K"] = resumoMENOR["estoc %D"]
-    resumoMENOR["EstocS %D"] = resumoMENOR["EstocS %K"].rolling(3).mean()
-    #resumo2.dropna(inplace=True) #remover espaços em branco
+        # estocastico lento a partir do df de menor tempo
+        resumoMENOR["EstocS %K"] = resumoMENOR["estoc %D"]
+        resumoMENOR["EstocS %D"] = resumoMENOR["EstocS %K"].rolling(3).mean()
+        #resumo2.dropna(inplace=True) #remover espaços em branco
 
-    # RESUMINDO DADOS A SEREM EXIBIDOS
-    resumoMAIOR = resumoMAIOR[['time','open','high','low','close','tick_volume','MME13','histog']]
-    resumoMENOR = resumoMENOR[['EstocS %D']]
+        # RESUMINDO DADOS A SEREM EXIBIDOS
+        resumoMAIOR = resumoMAIOR[['time','open','high','low','close','tick_volume','MME13','histog']]
+        resumoMENOR = resumoMENOR[['EstocS %D']]
 
-    resumoMAIOR = resumoMAIOR.tail()
-    resumoMENOR = resumoMENOR.tail()
-    #display(resumoMAIOR)
-    #display(resumoMENOR)
+        resumoMAIOR = resumoMAIOR.tail()
+        resumoMENOR = resumoMENOR.tail()
+        #display(resumoMAIOR)
+        #display(resumoMENOR)
 
-    # UNINDO DATAFRAMES
-    resumoFINAL = resumoMAIOR
-    resumoFINAL['Estoc'] = resumoMENOR['EstocS %D']
+        # UNINDO DATAFRAMES
+        resumoFINAL = resumoMAIOR
+        resumoFINAL['Estoc'] = resumoMENOR['EstocS %D']
 
-    resumoFINAL['Sinal'] = ''
+        resumoFINAL['Sinal'] = ''
 
-    if resumoFINAL['histog'].iloc[-2] > resumoFINAL['histog'].iloc[-3]:
-        if resumoFINAL['close'].iloc[-2] > resumoFINAL['MME13'].iloc[-2]:
-            if resumoFINAL['Estoc'].iloc[-2] <= 50:
-                if resumoFINAL['tick_volume'].iloc[-2] >= 00000:
-                    resumoFINAL['Sinal'].iloc[-2] = 'COMPRA'
-                    print(f'{symbol}: COMPRA')
-                    # print(resumoFINAL)
-        
-    elif resumoFINAL['histog'].iloc[-2] < resumoFINAL['histog'].iloc[-3]:
-        if resumoFINAL['close'].iloc[-2] < resumoFINAL['MME13'].iloc[-2]:
-            if resumoFINAL['Estoc'].iloc[-2] >= 50:
-                if resumoFINAL['tick_volume'].iloc[-2] >= 00000:
-                    resumoFINAL['Sinal'].iloc[-2] = 'VENDA'
-                    print(f'{symbol}: VENDA')
-                    # print(resumoFINAL)
-    # print(symbol)
-    # print(resumoFINAL)
+        if resumoFINAL['histog'].iloc[-2] > resumoFINAL['histog'].iloc[-3]:
+            if resumoFINAL['close'].iloc[-2] > resumoFINAL['MME13'].iloc[-2]:
+                if resumoFINAL['Estoc'].iloc[-2] <= 50:
+                    if resumoFINAL['tick_volume'].iloc[-2] >= 00000:
+                        resumoFINAL['Sinal'].iloc[-2] = 'COMPRA'
+                        print(f'{symbol}: COMPRA')
+                        # print(resumoFINAL)
+            
+        elif resumoFINAL['histog'].iloc[-2] < resumoFINAL['histog'].iloc[-3]:
+            if resumoFINAL['close'].iloc[-2] < resumoFINAL['MME13'].iloc[-2]:
+                if resumoFINAL['Estoc'].iloc[-2] >= 50:
+                    if resumoFINAL['tick_volume'].iloc[-2] >= 00000:
+                        resumoFINAL['Sinal'].iloc[-2] = 'VENDA'
+                        print(f'{symbol}: VENDA')
+                        # print(resumoFINAL)
+        # print(symbol)
+        # print(resumoFINAL)
 
-print(f'Total dos papeis analisados: {len(symbols)}')
+    print(f'Total dos papeis analisados: {len(symbols)}')
+
+except:
+    print('Erro na execução. Nova tentativa em 30s')
+    sleep(30)

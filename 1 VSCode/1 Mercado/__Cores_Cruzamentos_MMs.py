@@ -57,6 +57,11 @@ def wdo4R():
                 #bot.sendMessage(984798692, f'WDO_10R >> VENDA <<')
                 bot.sendMessage(984798692, f'CRUZAMENTO_MMs >> VENDA <<')
                 print('VENDA')
+            elif dadoS == '255':
+                bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
+                #bot.sendMessage(984798692, f'WDO_10R >> VENDA <<')
+                bot.sendMessage(984798692, f'CRUZAMENTO_MMs >> ZERADO <<')
+                print('ZERADO')
     except:
          bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
          bot.sendMessage(984798692, f'Falha no código, mas ainda funcionando. É bom conferir!')
