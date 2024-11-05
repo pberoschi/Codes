@@ -140,9 +140,8 @@ symbols = [
 'NZDUSD',
 'USDCHF',
 'USDHKD',
-'XAUEUR'
-# 'IBOV'
-# 'US500'
+'XAUEUR',
+'EURJPY'
 ]
 
 try:
