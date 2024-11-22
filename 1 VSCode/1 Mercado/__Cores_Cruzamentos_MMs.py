@@ -15,8 +15,9 @@ py.moveTo(x1, y1) #compra e venda
 
 # --------------------------------------------------------------------------------- #
 # Enviando imediatamente MSG de atual posição
-RGB = list(py.pixel(x1, y1))
-RGB = str(RGB[2])
+RGB1 = list(py.pixel(x1, y1))
+RGB = str(RGB1[2])
+print(RGB1)
 
 def wdo4R():
     
@@ -48,19 +49,21 @@ def wdo4R():
     try:
         if dadoS != dadoO:
             if dadoS == '80':
+            # if dadoS == '128':
                 bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
                 #bot.sendMessage(984798692, f'WDO_10R >> COMPRA <<')
                 bot.sendMessage(984798692, f'CRUZAMENTO_MMs >> COMPRA <<')
-                print('COMPRA')
+                print(f'COMPRA / {RGB}')
             elif dadoS == '48':
+            # elif dadoS == '0':
                 bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
                 #bot.sendMessage(984798692, f'WDO_10R >> VENDA <<')
                 bot.sendMessage(984798692, f'CRUZAMENTO_MMs >> VENDA <<')
-                print('VENDA')
+                print(f'VENDA / {RGB}')
             elif dadoS == '255':
                 bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
                 #bot.sendMessage(984798692, f'WDO_10R >> VENDA <<')
-                bot.sendMessage(984798692, f'CRUZAMENTO_MMs >> ZERADO <<')
+                #bot.sendMessage(984798692, f'CRUZAMENTO_MMs >> ZERADO <<')
                 print('ZERADO')
     except:
          bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
