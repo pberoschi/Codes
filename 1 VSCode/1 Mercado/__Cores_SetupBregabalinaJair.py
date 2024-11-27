@@ -11,13 +11,20 @@ x1 = 3646
 y1 = 822
 
 #py.moveTo(-1835,122) #compra e venda
-# py.moveTo(x1, y1) #compra e venda
+py.moveTo(x1, y1) #compra e venda
 
 # --------------------------------------------------------------------------------- #
 # Enviando imediatamente MSG de atual posição
 RGB1 = list(py.pixel(x1, y1))
-RGB = str(RGB1[2])
-print(RGB1)
+RGB = str(RGB1[1])
+
+
+def verCor():
+    # py.moveTo(x1, y1) #compra e venda
+    RGB1 = list(py.pixel(x1, y1))
+    RGB = str(RGB1[1])
+    print(RGB1)
+    
 
 def wdo4R():
     
@@ -28,7 +35,7 @@ def wdo4R():
     #Vermelho = py.pixelMatchesColor(510, 136, (204, 48, 48))
     #RGB = list(py.pixel(514, 139))
     RGB = list(py.pixel(x1, y1))
-    RGB = str(RGB[2])
+    RGB = str(RGB[1]) # VERDE E VERMELHO DIFERENTES, MAIS VIVOS
 
     #print(RGB)
     f.write(RGB) 
@@ -48,17 +55,15 @@ def wdo4R():
 
     try:
         if dadoS != dadoO:
-            if dadoS == '80':
-            # if dadoS == '128':
+            if dadoS == '128':
                 bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
                 #bot.sendMessage(984798692, f'WDO_10R >> COMPRA <<')
-                bot.sendMessage(984798692, f'CRUZAMENTO_MMs >> COMPRA <<')
+                bot.sendMessage(984798692, f'PREGABALINA >> COMPRA <<')
                 print(f'COMPRA / {RGB}')
-            elif dadoS == '48':
-            # elif dadoS == '0':
+            elif dadoS == '0':
                 bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
                 #bot.sendMessage(984798692, f'WDO_10R >> VENDA <<')
-                bot.sendMessage(984798692, f'CRUZAMENTO_MMs >> VENDA <<')
+                bot.sendMessage(984798692, f'PREGABALINA >> VENDA <<')
                 print(f'VENDA / {RGB}')
             elif dadoS == '255':
                 bot = telepot.Bot('6372818731:AAFZXRVBq90-ufHCiTc5l_Mqj0ozYXHEV7o')
@@ -80,4 +85,5 @@ def wdo4R():
 while True:
      # HORARIO DAS OPERAÇÕES
         wdo4R()
+        # verCor()
         sleep(2)
