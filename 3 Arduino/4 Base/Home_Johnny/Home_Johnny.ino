@@ -152,8 +152,8 @@ void papai() {
     // Serial.println(datafull);
     if (ntp.update()) {
       // if ((hora >= 18) && (hora <= 4)) {
-      if ((hora >= 8) && (hora <= 12)) {
-        // iluminacao_tempo();
+      if ((hora >= 16) && (hora <= 17)) {
+        iluminacao_tempo();
         Serial.println("Testando Horário...");
         }   
     }
@@ -169,9 +169,6 @@ void papai() {
   //Serial.println("_");
   delay(100);
 }
-
-
-
 
 
 

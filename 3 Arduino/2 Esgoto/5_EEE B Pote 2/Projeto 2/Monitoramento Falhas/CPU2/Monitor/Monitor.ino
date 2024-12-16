@@ -22,10 +22,10 @@ int IntervaloSEND = 0;
 int x;
 // const char* ssid     = "Embasa USA-M";
 // const char* password = "Sup0rt3!@#";
-const char* ssid     = "ELEVATORIOESGOTOSUL";
-const char* password = "87654321";
+const char* ssid     = "E.E.E.B.P.02";
+const char* password = "GCS9E03BP";
 char *server = "script.google.com";        // Server URL  
-char *GScriptId = "AKfycbzl6a2oUrvPiq1L6c-eu2yPgeUnnpQWcuvkKQnkUG6wjTGJPR-C6b6tmWZl5oqDgakxaw";         
+char *GScriptId = "AKfycbxX5WiQ3XKaiB1paWrjkeHb8Sr33TAmy38rq5AmOesedjohfxpcYbEUVDjTXpDoOmTT";         
 const int httpsPort = 443;
 // WiFiClientSecure client;
 
@@ -142,6 +142,7 @@ void loop() {
       // Serial.println("Chamando a função >>> Google Sheets <<<");
       sheets();
       // alea_testes();
+      
       // Serial.println("Chamando a função >>> Controle Nivel <<<");
       ctrlNivel();
       
