@@ -11,8 +11,8 @@ int IntervaloSEND = 0;
 int x;
 // const char* ssid     = "Embasa USA-M";     // your network SSID (name of wifi network)
 // const char* password = "Sup0rt3!@#";       // your network password
-const char* ssid     = "ELEVATORIOESGOTOSUL";
-const char* password = "87654321";
+const char* ssid     = "EMBASA";
+const char* password = "12345678";
 
 char *server = "script.google.com";        // Server URL
 char *GScriptId1 = "AKfycbxML2q1d-k_IloUnM-ByIyXa8u20JgFRltF8A00xPgvWJekrFJyB_TSLUyIGBT2hwOO"; //planilha teste               

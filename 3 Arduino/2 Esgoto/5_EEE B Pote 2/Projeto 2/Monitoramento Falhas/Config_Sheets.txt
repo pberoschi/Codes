@@ -1,0 +1,200 @@
+function doGet(e) {
+  Logger.log( JSON.stringify(e) ); // view parameters
+  var result = 'Ok'; // assume success
+  if (e.parameter == 'undefined') {
+    result = 'No Parameters';
+  }
+  else {
+    var sheet_id = '1w9R6Cjjjt2z1H_EmM28zrJdDWLT_zgFwYSrr1Uh8LLU';  // Spreadsheet ID
+    var sheet = SpreadsheetApp.openById(sheet_id).getActiveSheet(); // get Active sheet
+    var newRow = sheet.getLastRow() + 1;
+    var rowData = [];
+    d = new Date();
+    rowData[0] = d; // Timestamp in column A
+    rowData[1] = d.toLocaleTimeString(); // Timestamp in column A
+
+    for (var param in e.parameter) {
+      Logger.log('In for loop, param=' + param);
+      var value = stripQuotes(e.parameter[param]);
+      Logger.log(param + ':' + e.parameter[param]);
+      switch (param) {
+
+        // ---> FASE R_BA1 <--- 
+        case 'value1': //Parameter 1, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[2] = value; //Value in column A
+          result = 'Written on column A';
+          break;
+        case 'value2': //Parameter 2, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[3] = value; //Value in column B
+          result += ' Written on column B';
+          break;
+        case 'value3': //Parameter 3, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[4] = value; //Value in column C
+          result += ' Written on column C';
+          break;
+        case 'value4': //Parameter 4, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[5] = value; //Value in column D
+          result += ' Written on column D';
+          break;
+        case 'value5': //Parameter 5, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[6] = value; //Value in column E
+          result += ' Written on column E';
+          break;
+        case 'value6': //Parameter 6, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[7] = value; //Value in column F
+          result += ' Written on column F';
+          break;
+
+
+
+        // ---> FASE S_BA1 <--- 
+        case 'value7': //Parameter 7, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[9] = value; //Value in column H
+          result = 'Written on column H';
+          break;
+        case 'value8': //Parameter 8, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[10] = value; //Value in column I
+          result += ' Written on column I';
+          break;
+        case 'value9': //Parameter 9, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[11] = value; //Value in column J
+          result += ' Written on column J';
+          break;
+        case 'value10': //Parameter 10, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[12] = value; //Value in column L
+          result += ' Written on column L';
+          break;
+        case 'value11': //Parameter 11, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[13] = value; //Value in column M
+          result += ' Written on column M';
+          break;
+        case 'value12': //Parameter 12, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[14] = value; //Value in column N
+          result += ' Written on column N';
+          break;
+
+
+
+        // ---> FASE T_BA1 <--- 
+        case 'value13': //Parameter 15, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[16] = value; //Value in column O
+          result = 'Written on column O';
+          break;
+        case 'value14': //Parameter 16, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[17] = value; //Value in column P
+          result += ' Written on column P';
+          break;
+        case 'value15': //Parameter 17, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[18] = value; //Value in column Q
+          result += ' Written on column Q';
+          break;
+        case 'value16': //Parameter 18, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[19] = value; //Value in column R
+          result += ' Written on column R';
+          break;
+        case 'value17': //Parameter 19, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[20] = value; //Value in column S
+          result += ' Written on column S';
+          break;
+        case 'value18': //Parameter 20, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[21] = value; //Value in column T
+          result += ' Written on column T';
+          break;
+
+        //////////////// ------------- CMB 2 -----------------\\\\\\\\\\\\\\\
+
+        // ---> FASE R_BA2 <--- 
+        case 'value20': //Parameter 1, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[24] = value; //Value in column A
+          result = 'Written on column A';
+          break;
+        case 'value21': //Parameter 2, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[25] = value; //Value in column B
+          result += ' Written on column B';
+          break;
+        case 'value22': //Parameter 3, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[26] = value; //Value in column C
+          result += ' Written on column C';
+          break;
+        case 'value23': //Parameter 4, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[27] = value; //Value in column D
+          result += ' Written on column D';
+          break;
+        case 'value24': //Parameter 5, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[28] = value; //Value in column E
+          result += ' Written on column E';
+          break;
+        case 'value25': //Parameter 6, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[29] = value; //Value in column F
+          result += ' Written on column F';
+          break;
+
+        // ---> FASE S_BA2 <--- 
+        case 'value26': //Parameter 7, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[31] = value; //Value in column H
+          result = 'Written on column H';
+          break;
+        case 'value27': //Parameter 8, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[32] = value; //Value in column I
+          result += ' Written on column I';
+          break;
+        case 'value28': //Parameter 9, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[33] = value; //Value in column J
+          result += ' Written on column J';
+          break;
+        case 'value29': //Parameter 10, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[34] = value; //Value in column L
+          result += ' Written on column L';
+          break;
+        case 'value30': //Parameter 11, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[35] = value; //Value in column M
+          result += ' Written on column M';
+          break;
+        case 'value31': //Parameter 12, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[36] = value; //Value in column N
+          result += ' Written on column N';
+          break;
+
+
+        // ---> FASE T_BA1 <--- 
+        case 'value32': //Parameter 15, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[38] = value; //Value in column O
+          result = 'Written on column O';
+          break;
+        case 'value33': //Parameter 16, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[39] = value; //Value in column P
+          result += ' Written on column P';
+          break;
+        case 'value34': //Parameter 17, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[40] = value; //Value in column Q
+          result += ' Written on column Q';
+          break;
+        case 'value35': //Parameter 18, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[41] = value; //Value in column R
+          result += ' Written on column R';
+          break;
+        case 'value36': //Parameter 19, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[42] = value; //Value in column S
+          result += ' Written on column S';
+          break;
+        case 'value37': //Parameter 20, It has to be updated in Column in Sheets in the code, orderwise
+          rowData[43] = value; //Value in column T
+          result += ' Written on column T';
+          break;
+
+
+        default:
+          result = "unsupported parameter";
+      }
+    }
+    Logger.log(JSON.stringify(rowData));
+    // Write new row below
+    var newRange = sheet.getRange(newRow, 1, 1, rowData.length);
+    newRange.setValues([rowData]);
+  }
+  // Return result of operation
+  return ContentService.createTextOutput(result);
+}
+function stripQuotes( value ) {
+  return value.replace(/^["']|['"]$/g, "");
+}

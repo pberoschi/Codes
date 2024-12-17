@@ -42,8 +42,8 @@ const String STATS = "status";
 const String HOUR = "hora";
 uint32_t lastCheckTime = 0;
 
-#define WIFI_SSID "ELEVATORIOESGOTOSUL"
-#define WIFI_PASSWORD "87654321"
+#define WIFI_SSID "EMBASA"
+#define WIFI_PASSWORD "12345678"
 // #define WIFI_SSID "Embasa USA-M"
 // #define WIFI_PASSWORD "Sup0rt3!@#"
 #define BOT_TOKEN "5875114157:AAHahh0XbtDqGJhm6DH9cS2sjfHdZEEJgbo"
@@ -114,7 +114,7 @@ void setup() {
   // -3 = -10800 (BRASIL)
   ntp.setTimeOffset(-10800);
 
-  bot.sendMessage(CHAT_ID, "Sistema de monitoramento de FALHAS EEE SUL iniciado." , "");
+  bot.sendMessage(CHAT_ID, "Sistema de monitoramento de FALHAS EEE MOCAMBO iniciado." , "");
   delay(1000);
   //handleStatus(CHAT_ID);
   }
@@ -135,7 +135,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nEXTRAVASANDO", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nEXTRAVASANDO", "");
     //Serial.print("EXTRAVASANDO");
     delay(10);
     }
@@ -143,7 +143,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nFALHA NO CMB 1", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nFALHA NO CMB 1", "");
     //Serial.print("FALHA NO CMB 1");
     delay(10);
     }
@@ -151,7 +151,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nFALHA NO CMB 2", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nFALHA NO CMB 2", "");
     //Serial.print("FALHA NO CMB 2");
     delay(10);
     }
@@ -159,7 +159,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nFALHA NO CONTROLADOR DE NÍVEL", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nFALHA NO CONTROLADOR DE NÍVEL", "");
     //Serial.print("FALHA NO CONTROLADOR DE NÍVEL");
     delay(10);
     }
@@ -167,7 +167,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nFALTA DE ENERGIA / FASE", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nFALTA DE ENERGIA / FASE", "");
     //Serial.print("FALTA DE ENERGIA");
     delay(10);
     }
@@ -175,7 +175,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nGERADOR LIGADO (FALTA DE ENERGIA)", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nGERADOR LIGADO (FALTA DE ENERGIA)", "");
     //Serial.print("GERADOR LIGADO");
     delay(10);
     }
@@ -183,7 +183,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nCMB RODANDO SECO", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nCMB RODANDO SECO", "");
     //Serial.print("CMB RODANDO SECO");
     delay(10);
     }
@@ -191,7 +191,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nTESTE NO SISTEMA DE TELEMETRIA", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nTESTE NO SISTEMA DE TELEMETRIA", "");
     //Serial.print("TESTE NO SISTEMA DE TELEMETRIA");
     delay(10);
     }
@@ -199,7 +199,7 @@ void loop()
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
-    bot.sendMessage(CHAT_ID, "*** EEE SUL *** \nNÍVEL MUITO ALTO", "");
+    bot.sendMessage(CHAT_ID, "*** EEE MOCAMBO *** \nNÍVEL MUITO ALTO", "");
     //Serial.print("NÍVEL MUITO ALTO");
     delay(10);
     }
@@ -214,7 +214,7 @@ void loop()
         Serial.println(datafull);
         String(a) = String(hora);
         String(b) = String(minuto);
-        bot.sendMessage(CHAT_ID, "Teste de Comunicação horário EEE SUL: OK","");
+        bot.sendMessage(CHAT_ID, "Teste de Comunicação horário EEE MOCAMBO","");
         //bot.sendMessage(CHAT_ID, b,"");
         //bot.sendMessage(CHAT_ID, a,"");
         delay(60000);

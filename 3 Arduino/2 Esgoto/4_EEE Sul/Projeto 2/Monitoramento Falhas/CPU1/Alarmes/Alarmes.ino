@@ -42,10 +42,10 @@ const String STATS = "status";
 const String HOUR = "hora";
 uint32_t lastCheckTime = 0;
 
-//#define WIFI_SSID "BARRA DO GIL 4"
-//#define WIFI_PASSWORD "36112907"
-#define WIFI_SSID "Embasa USA-M"
-#define WIFI_PASSWORD "Sup0rt3!@#"
+#define WIFI_SSID "ELEVATORIOESGOTOSUL"
+#define WIFI_PASSWORD "87654321"
+// #define WIFI_SSID "Embasa USA-M"
+// #define WIFI_PASSWORD "Sup0rt3!@#"
 #define BOT_TOKEN "5875114157:AAHahh0XbtDqGJhm6DH9cS2sjfHdZEEJgbo"
 //#define CHAT_ID "984798692"
 #define CHAT_ID "-1001851643135"

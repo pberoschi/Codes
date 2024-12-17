@@ -20,10 +20,10 @@ int IntervaloSEND = 0;
 
 #define ledPin 2
 int x;
-const char* ssid     = "Embasa USA-M";
-const char* password = "Sup0rt3!@#";
-// const char* ssid     = "BARRA DO GIL 4";
-// const char* password = "36112907";
+// const char* ssid     = "Embasa USA-M";
+// const char* password = "Sup0rt3!@#";
+const char* ssid     = "ELEVATORIOESGOTOSUL";
+const char* password = "87654321";
 char *server = "script.google.com";        // Server URL  
 char *GScriptId = "AKfycbzl6a2oUrvPiq1L6c-eu2yPgeUnnpQWcuvkKQnkUG6wjTGJPR-C6b6tmWZl5oqDgakxaw";         
 const int httpsPort = 443;
