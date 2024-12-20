@@ -37,7 +37,7 @@ RGB33 = list(py.pixel(x3, y3))
 RGB3 = str(RGB33[2])
 # print(RGB3)
 
-def ativo1():
+def JairBot():
     
     filename = 'Negocios_cruzam.txt'
     f =open(filename, "w")
@@ -95,7 +95,7 @@ def ativo1():
     shutil.copy('Negocios_cruzam.txt', 'Negocios_cruzam2.txt')
     #print('.')
 
-def ativo2():
+def JairEstoc():
     
     filename = 'Negocios_cruzam_2.txt'
     f =open(filename, "w")
@@ -153,7 +153,7 @@ def ativo2():
     shutil.copy('Negocios_cruzam_2.txt', 'Negocios_cruzam2_2.txt')
     #print('.')
 
-def ativo3():
+def Return():
     
     filename = 'Negocios_cruzam_3.txt'
     f =open(filename, "w")
@@ -213,10 +213,10 @@ def ativo3():
 
 while True:
      # HORARIO DAS OPERAÇÕES
-        ativo1()
+        JairBot()
         sleep(1)
-        ativo2()
+        JairEstoc()
         sleep(1)
-        ativo3()
+        Return()
         sleep(1)
 
