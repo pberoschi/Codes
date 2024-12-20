@@ -50,6 +50,8 @@ const String HOUR = "hora";
 uint32_t lastCheckTime = 0;
 
 char* remoteHost = "www.google.com";                    //IP ou endereço web para realizar o ping
+// const IPAddress johnny_ip1(192, 168, 0, 100); //Trabalho
+// const IPAddress johnny_ip2(192, 168, 0, 138); //Trabalho
 const IPAddress johnny_ip1(192, 168, 0, 104);
 const IPAddress johnny_ip2(192, 168, 0, 102);
 const IPAddress grazi_ip3(192, 168, 0, 115);
@@ -120,13 +122,6 @@ void loop() {
     }
     lastTimeBotRan = millis();
   }
-
-  // ntp.update();
-  // const String datafull       = (ntp.getFormattedDate());
-  // const int hora              = (ntp.getHours());
-  // const int minuto            = (ntp.getMinutes());
-  // const int segundo           = (ntp.getSeconds());  
-  // Serial.println(datafull);
   
   papai();
   delay(100);
@@ -138,7 +133,7 @@ void loop() {
 void papai() {
   if ((Ping.ping(johnny_ip1,3)) || (Ping.ping(johnny_ip2,3))) {                   
     if (x == 0){
-      // Serial.println("JOHNNY ON");
+      Serial.println("JOHNNY ON");
       bot.sendMessage(CHAT_ID, "Papai ESTÁ em casa", "");
       x = 1;
       
@@ -151,17 +146,17 @@ void papai() {
 
     // Serial.println(datafull);
     if (ntp.update()) {
-      // if ((hora >= 18) && (hora <= 4)) {
-      if ((hora >= 16) && (hora <= 17)) {
+      if ((hora >= 18) && (hora <= 23)) {
+      // if ((hora >= 16) && (hora <= 17)) {
         iluminacao_tempo();
-        Serial.println("Testando Horário...");
+        // Serial.println("Testando Horário...");
         }   
     }
   }
     
   } else {
       if (x == 1){
-      // Serial.println("JOHNNY OFF");
+      Serial.println("JOHNNY OFF");
       bot.sendMessage(CHAT_ID, "Papai NÃO ESTÁ em casa", "");
       x = 0;
       }
