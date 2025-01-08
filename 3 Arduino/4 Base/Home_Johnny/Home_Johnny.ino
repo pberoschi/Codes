@@ -34,10 +34,10 @@ const int gourmetPin  = 4;
 
 bool ledState = LOW;
 
-const char* ssid     = "Embasa USA-M";
-const char* password = "Sup0rt3!@#";
-// const char* ssid     = "House Tec";
-// const char* password = "claudia2022";
+// const char* ssid     = "Embasa USA-M";
+// const char* password = "Sup0rt3!@#";
+const char* ssid     = "House Tec";
+const char* password = "claudia2022";
 
 const String datafull = "";
 const int hora = 0;
