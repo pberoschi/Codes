@@ -50,9 +50,9 @@ void setup() {
   pinMode(prod1,OUTPUT);
   // pinMode(buzzer,OUTPUT);
   // pinMode(ledPin,OUTPUT);
+  digitalWrite(agua, LOW);
   digitalWrite(prod1, LOW);
-  // digitalWrite(ledPin, LOW);
-
+  
   pulseCount = 0;
   flowRate = 0.0;
   flowMilliLitres = 0;
@@ -75,6 +75,9 @@ void setup() {
   graficos();
   ProgressBar();
   InicioCiclo();
+
+  digitalWrite(agua, HIGH);
+
 }
 
 void loop() { 
@@ -129,7 +132,6 @@ void flow() {
       produto1();
       InicioCiclo();
       digitalWrite(agua,HIGH);
-
     }
   }  
 }
